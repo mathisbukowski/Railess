@@ -1,5 +1,7 @@
 import fs from 'node:fs/promises'
 import express from 'express'
+import { get_stations_from_file } from './sncf-utils/loader.js'
+import { get_station_by_city } from './sncf-utils/stations.js' 
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production'
@@ -16,6 +18,9 @@ const ssrManifest = isProduction
 
 // Create http server
 const app = express()
+
+// Load SNCF data
+app.set("stations", await get_stations_from_file());
 
 // Add Vite or respective production middlewares
 let vite
@@ -69,3 +74,7 @@ app.use('*', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`)
 })
+
+export { app };
+
+console.log(get_station_by_city("LIBERCOURT"));
