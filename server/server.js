@@ -1,5 +1,7 @@
 import fs from 'node:fs/promises'
 import express from 'express'
+import { importGtfs, getStops, getTrips, getRoutes, getStoptimes } from 'gtfs';
+import Database from 'better-sqlite3';
 import { get_stations_from_file } from './sncf-utils/loader.js'
 import { get_station_by_city } from './sncf-utils/stations.js' 
 
@@ -75,6 +77,44 @@ app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`)
 })
 
-export { app };
+//console.log(get_station_by_city("LIBERCOURT"));
 
-console.log(get_station_by_city("LIBERCOURT"));
+const config = JSON.parse(
+  await fs.readFile(new URL('../config.json', import.meta.url))
+);
+
+try {
+  await importGtfs(config);
+} catch (error) {
+  console.error(error);
+}
+
+function get_stop_id_by_name(name) {
+  return getStops({ stop_name: name })[0].stop_id;
+}
+
+function get_route_id(stopId) {
+  return getRoutes({ stop_id: stopId })[0].route_id;
+}
+
+function get_all_departure_by_stop_name(name) {
+  return getStoptimes({
+    stop_id: get_stop_id_by_name(name)
+  }).map((stopTime) => ({ time: stopTime.arrival_time, id: stopTime.trip_id }));
+}
+
+const allDepartures = get_all_departure_by_stop_name("Libercourt");
+for (let i = 0; i < allDepartures.length; i++) {
+  console.log(allDepartures[i])
+}
+
+// const stops = getStoptimes({
+//   trip_id: getTrips({
+//     route_id: get_route_id(get_stop_id_by_name("Libercourt"))
+//   })[11].trip_id,
+//   stop_id: get_stop_id_by_name("Douai")
+// })
+// // const stops = getStoptimes();
+// console.log(stops);
+
+export { app };
