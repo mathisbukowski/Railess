@@ -18,6 +18,12 @@ export function get_stop_id_by_name(name) {
   return getStops({ stop_name: name })[0].stop_id;
 }
 
+export function get_all_station_name() {
+    const stationsName = getStops()
+        .map((stop) => stop.stop_name);
+    return [...new Set(stationsName)];
+}
+
 // Routes
 export function get_route_id(stopId) {
   return getRoutes({ stop_id: stopId })
