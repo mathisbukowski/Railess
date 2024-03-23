@@ -2,7 +2,7 @@ import fs from 'node:fs/promises'
 import express from 'express'
 import { get_stations_from_file } from './sncf-utils/loader.js'
 import { get_station_by_city } from './sncf-utils/stations.js' 
-import { get_all_departure_by_stop_name, get_train_name, load_gtfs_data, get_stop_time_by_stop_name, get_all_station_name } from './sncf-utils/gtfs_functions.js';
+import { load_gtfs_data } from './sncf-utils/gtfs_functions.js';
 import { apiRoute } from './api/api.js';
 
 // Constants

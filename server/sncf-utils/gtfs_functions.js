@@ -70,6 +70,19 @@ export function get_short_name_by_trip_id(tripId) {
     return stopTime[0].route_short_name;
 }
 
-export function get_train_name(departure) {
+export function get_train_short_name(departure) {
     return get_short_name_by_trip_id(get_route_id_by_trip_id(departure.trip_id));
+}
+
+export function get_long_name_by_trip_id(tripId) {
+    const stopTime = getRoutes({
+        route_id: tripId
+    });
+    if (stopTime == [])
+        return undefined;
+    return stopTime[0].route_long_name;
+}
+
+export function get_train_long_name(departure) {
+    return get_long_name_by_trip_id(get_route_id_by_trip_id(departure.trip_id));
 }
