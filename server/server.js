@@ -1,7 +1,5 @@
 import fs from 'node:fs/promises'
 import express from 'express'
-import { get_stations_from_file } from './sncf-utils/loader.js'
-import { get_station_by_city } from './sncf-utils/stations.js' 
 import { load_gtfs_data } from './sncf-utils/gtfs_functions.js';
 import { apiRoute } from './api/api.js';
 

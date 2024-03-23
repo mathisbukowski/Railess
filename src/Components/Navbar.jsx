@@ -12,18 +12,18 @@ function Navbar() {
     return (
         <>
             <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
-                <h1 className="w-full text-3xl font-bold text-textColor font-kode"> Railess.</h1>
+                <h1 className="w-full text-3xl font-bold text-textColor font-kode"> <Link to="/">Railess.</Link></h1>
                 <ul className="hidden md:flex">
-                    <li className="p-4 text-textColor font-bold text-center text-xl">
+                    <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
                         <Link to="/about">About</Link>
                     </li>
-                    <li className="p-4 text-textColor font-bold text-center text-xl">
+                    <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
                         <Link to="/service">Service</Link>
                     </li>
-                    <li className="p-4 text-textColor font-bold text-center text-xl">
-                        <Link to="/help">Help</Link>
+                    <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
+                        <Link to="https://github.com/mathisbukowski/Epitech-Jam/blob/main/README.md">Documentation</Link>
                     </li>
-                    <li className="p-4 text-textColor font-bold text-center text-xl">
+                    <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
                         <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
@@ -31,18 +31,18 @@ function Navbar() {
                     {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
                 </div>
                 <ul className={`md:hidden ${nav ? "block" : "hidden"} fixed left-0 top-0 w-[60%] h-full border-r border-r-textColor bg-bgColor ease-in-out duration-500`}>
-                    <h1 className="w-full text-3xl font-bold m-4 text-textColor font-kode">Railess.</h1>
-                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl">
-                        <a>About</a>
+                    <h1 className="w-full text-3xl font-bold m-4 text-textColor font-kode"><Link to="/">Railess.</Link></h1>
+                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl hover:text-lineColor">
+                        <Link to="/about">About</Link>
                     </li>
-                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl">
-                        <a>Service</a>
+                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl hover:text-lineColor">
+                        <Link to="/service">Service</Link>
                     </li>
-                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl">
-                        <a>Help</a>
+                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl hover:text-lineColor">
+                        <Link to="https://github.com/mathisbukowski/Epitech-Jam/blob/main/README.md">Documentation</Link>
                     </li>
                     <li className="p-4 text-textColor font-bold text-center text-xl">
-                        <a>Contact</a>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
             </div>

@@ -1,69 +1,49 @@
-import Single from "/logorailess-removebg.png";
+import React from 'react';
 
-const Cards = () => {
+function FeatureCard({ icon, title, description }) {
     return (
-        <div className="w-full py-[10rem] px-4 bg-white">
-            <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
-                <div
-                    className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-lineColor">
-                    <img
-                        className="w-20 mx-auto mt-[-3rem] bg-white border-2 border-lineColor rounded-lg"
-                        src={Single}
-                        alt="/"
+        <div className="flex flex-col items-center p-4 w-[400px] h-64 bg-white rounded-2xl border border-gray-200 shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+            <div className="flex-shrink-0">
+                <img className="h-12 w-12" src={icon} alt="icon" />
+            </div>
+            <div className="text-center mt-3 flex flex-col flex-grow">
+                <h3 className="text-lg font-medium text-gray-900">{title}</h3>
+                <p className="mt-2 text-gray-500 text-md">{description}</p>
+            </div>
+        </div>
+    );
+}
+
+
+function Cards() {
+    return (
+        <div className="py-10 bg-gray-50">
+            <div className="flex justify-center">
+                <div className="grid gap-6 gap-x-[200px] grid-cols-2 justify-items-center mx-4 lg:w-2/3 xl:w-1/2">
+                    <FeatureCard
+                        icon="/service.svg"
+                        title="User SaaS"
+                        description="A service created by users for users."
                     />
-                    <h2 className="text-2xl font-bold text-center py-8 text-textColor">Single User</h2>
-                    <p className="text-center text-4xl font-bold text-textColor">$149</p>
-                    <div className="text-center font-medium">
-                        <p className="py-2 border-b mx-8 mt-8 text-textColor">500 GB Storage</p>
-                        <p className="py-2 border-b mx-8 text-textColor">1 Granted User</p>
-                        <p className="py-2 border-b mx-8 text-textColor">Send up to 2 GB</p>
-                    </div>
-                    <button
-                        className="bg-buttonColor w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3 text-textColor">
-                        Start Trial
-                    </button>
-                </div>
-                <div
-                    className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-lineColor">
-                    <img
-                        className="w-20 mx-auto mt-[-3rem] bg-white border-2 border-lineColor rounded-lg"
-                        src={Single}
-                        alt="/"
+                    <FeatureCard
+                        icon="/time.svg"
+                        title="Saving Time"
+                        description="With Railess, you can earn a lot on your train searches."
                     />
-                    <h2 className="text-2xl font-bold text-center py-8 text-textColor">Single User</h2>
-                    <p className="text-center text-4xl font-bold text-textColor">$149</p>
-                    <div className="text-center font-medium">
-                        <p className="py-2 border-b mx-8 mt-8 text-textColor">500 GB Storage</p>
-                        <p className="py-2 border-b mx-8 text-textColor">1 Granted User</p>
-                        <p className="py-2 border-b mx-8 text-textColor">Send up to 2 GB</p>
-                    </div>
-                    <button
-                        className="bg-buttonColor w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3 text-textColor">
-                        Start Trial
-                    </button>
-                </div>
-                <div
-                    className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-lineColor">
-                    <img
-                        className="w-20 mx-auto mt-[-3rem] bg-white border-2 border-lineColor rounded-lg"
-                        src={Single}
-                        alt="/"
+                    <FeatureCard
+                        icon="/support.svg"
+                        title="Reactive Support"
+                        description="Our support service is very fast and efficient."
                     />
-                    <h2 className="text-2xl font-bold text-center py-8 text-textColor">Single User</h2>
-                    <p className="text-center text-4xl font-bold text-textColor">$149</p>
-                    <div className="text-center font-medium">
-                        <p className="py-2 border-b mx-8 mt-8 text-textColor">500 GB Storage</p>
-                        <p className="py-2 border-b mx-8 text-textColor">1 Granted User</p>
-                        <p className="py-2 border-b mx-8 text-textColor">Send up to 2 GB</p>
-                    </div>
-                    <button
-                        className="bg-buttonColor w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3 text-textColor">
-                        Start Trial
-                    </button>
+                    <FeatureCard
+                        icon="/icon.svg"
+                        title="Beta Version"
+                        description="Our service is brand new, there may be some unknown bugs. Get closer to the support if necessary."
+                    />
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default Cards;
