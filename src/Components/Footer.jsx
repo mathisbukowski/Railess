@@ -1,6 +1,7 @@
 import {
     FaGithubSquare
 } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import SNCF from "/sncf.png";
 
 const Footer = () => {
@@ -34,7 +35,7 @@ const Footer = () => {
                 <div>
                     <h6 className="font-extrabold text-textColor text-xl">Legal</h6>
                     <ul>
-                        <li className="py-2 text-lineColor text-lg">Policy</li>
+                        <li className="py-2 text-lineColor text-lg"><Link to="/policies">Policy</Link></li>
                         <li className="py-2 text-lg text-lineColor">Terms</li>
                     </ul>
                 </div>

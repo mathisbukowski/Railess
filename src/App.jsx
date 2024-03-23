@@ -10,6 +10,7 @@ import About from "./Pages/About.jsx";
 import Service from "./Pages/Service.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Help from "./Pages/Help.jsx";
+import Policies from "./Pages/Policies.jsx";
 
 function App() {
     let router;
@@ -24,6 +25,7 @@ function App() {
                     <Route key={"Service"} element={<Service />} path={"/service"} name={"Service"} middleware={[]}/>
                     <Route key={"Help"} element={<Help />} path={"/help"} name={"Help"} middleware={[]}/>
                     <Route key={"Contact"} element={<Contact />} path={"/contact"} name={"Contact"} middleware={[]}/>
+                    <Route key={"Policies"} element={<Policies />} path={"/policies"} name={"Policies"} middleware={[]}/>
                 </Routes>
             </BrowserRouter>
          </>
