@@ -138,11 +138,65 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: true,
       backgroundColor: CustomColors.background,
+      bottom: PreferredSize(
+        preferredSize: Size.fromHeight(60.0), // Adjust this value as needed
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SearchAnchor(
+            builder: (BuildContext context, SearchController controller) {
+              return Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: SearchBar(
+                      controller: controller,
+                      padding: const MaterialStatePropertyAll<EdgeInsets>(
+                        EdgeInsets.symmetric(horizontal: 8.0),
+                      ),
+                      onTap: () {
+                        controller.openView();
+                      },
+                      onChanged: (_) {
+                        controller.openView();
+                      },
+                      leading: const Icon(Icons.search),
+                      trailing: <Widget>[
+                        Tooltip(
+                            message: 'Change brightness mode',
+                            child: IconButton(
+                              isSelected: isDark,
+                              onPressed: () {
+                                // setState logic here
+                              },
+                              icon: const Icon(Icons.wb_sunny_outlined),
+                              selectedIcon: const Icon(Icons.brightness_2_outlined),
+                            )
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              );
+            },
+            suggestionsBuilder: (BuildContext context, SearchController controller) {
+              return List<ListTile>.generate(20, (int index) {
+                final String item = 'item $index';
+                return ListTile(
+                  title: Text(item),
+                  onTap: () {
+                    // setState logic here
+                  },
+                );
+              });
+            },
+          ),
+        ),
+      ),
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => Size.fromHeight(kToolbarHeight + 60.0); // Adjust this value as needed
 }
 
 class MyDrawer extends StatelessWidget {
@@ -222,63 +276,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SearchAnchor(
-        builder: (BuildContext context, SearchController controller) {
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(
-                child: SearchBar(
-                  controller: controller,
-                  padding: const MaterialStatePropertyAll<EdgeInsets>(
-                    EdgeInsets.symmetric(horizontal: 8.0),
-                  ),
-                  onTap: () {
-                    controller.openView();
-                  },
-                  onChanged: (_) {
-                    controller.openView();
-                  },
-                  leading: const Icon(Icons.search),
-                  trailing: <Widget>[
-                    Tooltip(
-                        message: 'Change brightness mode',
-                        child: IconButton(
-                          isSelected: widget.isDark,
-                          onPressed: () {
-                            setState(() {
-                              widget.onThemeChanged(!widget.isDark);
-                            });
-                          },
-                          icon: const Icon(Icons.wb_sunny_outlined),
-                          selectedIcon: const Icon(Icons.brightness_2_outlined),
-                        )
-                    )
-                  ],
-                ),
-              ),
-            ],
-          );
-        },
-        suggestionsBuilder: (BuildContext context, SearchController controller) {
-          return List<ListTile>.generate(20, (int index) {
-            final String item = 'item $index';
-            return ListTile(
-              title: Text(item),
-              onTap: () {
-                setState(() {
-                  controller.closeView(item);
-                });
-              },
-            );
-          });
-        },
-      ),
+    return Center(
+      child: Text('Home Page')
     );
   }
 }
+
 class TrainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
