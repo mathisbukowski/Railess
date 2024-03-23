@@ -17,7 +17,7 @@ const Contact = () => {
                     </div>
                     <div className="mt-8 text-center">
                         <p className="text-lg text-black-600">You can also reach us via:</p>
-                        <p className="text-lg text-black-600">Email: railess@gmail.com</p>
+                        <p className="text-lg text-black-600">Email: contact@mathisbukowski.fr</p>
                     </div>
                 </div>
             </div>
