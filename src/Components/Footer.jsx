@@ -15,9 +15,15 @@ const Footer = () => {
                     A project made for treating Open Data with SCNF API.
                 </p>
                 <div className="flex justify-start md:w-[75%] my-4">
-                    <FaGithubSquare size={30} className="my-[12px] mr-4" color="#223240"/>
-                    <FaTrain size={30} className="my-[12px] mr-4" color="#223240"/>
-                    <FaDatabase size={30} className="my-[12px]" color="#223240" />
+                    <Link to="https://github.com/mathisbukowski/Epitech-Jam">
+                        <FaGithubSquare size={30} className="my-[12px] mr-4" color="#223240"/>
+                    </Link>
+                    <Link to="https://www.sncf.com/fr">
+                        <FaTrain size={30} className="my-[12px] mr-4" color="#223240"/>
+                    </Link>
+                    <Link to="https://ressources.data.sncf.com/api/explore/v2.1/console">
+                        <FaDatabase size={30} className="my-[12px]" color="#223240" />
+                    </Link>
                 </div>
             </div>
             <div className="lg:col-span-2 flex justify-center lg:justify-between mt-[16px] mx-[150px]">
@@ -31,7 +37,7 @@ const Footer = () => {
                 <div className="mr-20">
                     <h6 className="font-extrabold text-textColor text-xl">Company</h6>
                     <ul>
-                        <li className="py-2 text-lg text-lineColor"><Link to="/About">About</Link></li>
+                        <li className="py-2 text-lg text-lineColor"><Link to="/About">About Us</Link></li>
                         <li className="py-2 text-lg text-lineColor"><Link to="/Contact">Contact</Link></li>
                     </ul>
                 </div>
@@ -39,7 +45,6 @@ const Footer = () => {
                     <h6 className="font-extrabold text-textColor text-xl">Legal</h6>
                     <ul>
                         <li className="py-2 text-lineColor text-lg"><Link to="/policies">Policy</Link></li>
-                        <li className="py-2 text-lg text-lineColor">Terms</li>
                     </ul>
                 </div>
             </div>
