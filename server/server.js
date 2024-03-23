@@ -2,7 +2,7 @@ import fs from 'node:fs/promises'
 import express from 'express'
 import { get_stations_from_file } from './sncf-utils/loader.js'
 import { get_station_by_city } from './sncf-utils/stations.js' 
-import { get_all_departure_by_stop_name, get_train_name_by_departure, load_gtfs_data } from './sncf-utils/gtfs_functions.js';
+import { get_all_departure_by_stop_name, get_train_name, load_gtfs_data, get_stop_time_by_stop_name } from './sncf-utils/gtfs_functions.js';
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production'
@@ -77,28 +77,17 @@ app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`)
 })
 
-//console.log(get_station_by_city("LIBERCOURT"));
+let allDepartures = get_all_departure_by_stop_name("Libercourt");
 
-
-
-const allDepartures = get_all_departure_by_stop_name("Libercourt");
-
-allDepartures.every((departure) => {
-  const trainName = get_train_name_by_departure(departure);
+allDepartures.forEach((departure) => {
+  const trainName = get_train_name(departure);
   departure.trainName = trainName;
 });
+allDepartures = allDepartures.filter((departure) => departure.trip_id.endsWith("53Z"));
 
 console.log(allDepartures.sort(function (a, b) {
   return a.time.localeCompare(b.time);
 }));
 
-// const stops = getStoptimes({
-//   trip_id: getTrips({
-//     route_id: get_route_id(get_stop_id_by_name("Libercourt"))
-//   })[11].trip_id,
-//   stop_id: get_stop_id_by_name("Douai")
-// })
-// // const stops = getStoptimes();
-// console.log(stops);
 
 export { app };
