@@ -30,10 +30,9 @@
 #### Pour la compilation et l'exécution du programme :
 #### Pour voir ce que vous réaliser, vous pouvez ouvrir une vm sur Android studio.
 #### Il vous suffit de faire la commande suivante au root du repo :
-
-    ```sh
+  ```sh
         flutter run
-    ```
+  ```
 #### Projet réalisé par:
 - **Mathis Bukowski**
 - **Maxime Bertin**
