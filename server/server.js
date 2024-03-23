@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import express from 'express'
-import { load_gtfs_data } from './sncf-utils/gtfs_functions.js';
+import { get_all_departure_by_stop_name, get_train_name, load_gtfs_data, get_stop_time_by_stop_name } from './sncf-utils/gtfs_functions.js';
 import { apiRoute } from './api/api.js';
 
 // Constants
@@ -18,6 +18,9 @@ const ssrManifest = isProduction
 
 // Create http server
 const app = express()
+
+// Load SNCF data
+await load_gtfs_data();
 
 // Load routes
 app.use("/api", apiRoute);
@@ -74,5 +77,18 @@ app.use('*', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`)
 })
+
+// let allDepartures = get_all_departure_by_stop_name("Libercourt");
+
+// allDepartures.forEach((departure) => {
+//   const trainName = get_train_name(departure);
+//   departure.trainName = trainName;
+// });
+// allDepartures = allDepartures.filter((departure) => departure.trip_id.endsWith("53Z"));
+
+// console.log(allDepartures.sort(function (a, b) {
+//   return a.time.localeCompare(b.time);
+// }));
+
 
 export { app };
