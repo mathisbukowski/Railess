@@ -7,29 +7,29 @@
 - **L'intégration de données ouvertes (données de la SNFC)**
 - **La contribution ou la publication d'un projet open-source (via notre site et l'application)**
 
-### Pour le site:
-#### Prérequis:
+### Pour le site :
+#### Prérequis :
 #### Être sûr que npm est installé
   ```sh
         sudo apt-get install npm
   ```
-## Compilation et lancement du programme:
+#### Compilation et lancement du programme :
   ```sh
         npm install
 ```
   ```sh
         npm run dev
 ```
-### Pour l'application mobile:
-#### Prérequis:
-#### Veuilez installer:
+### Pour l'application mobile :
+#### Prérequis :
+#### Veuillez installer :
 - **Android studio**
 - **Dart**
 - **Flutter**
 
-#### Pour la compilation et l'execution du programme:
+#### Pour la compilation et l'exécution du programme :
 #### Pour voir ce que vous réaliser, vous pouvez ouvrir une vm sur Android studio.
-#### Il vous suffit de faire la commande suivante au root du repo:
+#### Il vous suffit de faire la commande suivante au root du repo :
 
     ```sh
         flutter run
