@@ -31,7 +31,7 @@ function App() {
          </>
         )
     } else {
-        router = <div>Loading..</div>
+        router = <div>Loading...</div>
     }
     return router;
 }

@@ -7,7 +7,9 @@ const Service = () => {
     return (
         <div>
             <Navbar />
-            <h1>Service Page</h1>
+            <div className="w-full py-[5rem] px-4 bg-white">
+                <h1 style={{ textAlign: 'center', fontWeight: 'bold', color: 'black', margin: 'auto' }} class = 'text-4xl'>Service Page</h1>
+            </div>
             <Newsletter />
             <Footer />
         </div>
