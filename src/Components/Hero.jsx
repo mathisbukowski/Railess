@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Typed from "typed.js"
 import { motion } from "framer-motion";
+import {Link} from "react-router-dom";
 
 const MotionDiv = motion.div;
 const Hero = () =>  {
@@ -24,7 +25,7 @@ const Hero = () =>  {
                         </p>
                         <button
                             className="bg-lineColor w-[200px] rounded-md font-extrabold my-6 py-3 text-textColor mx-[50px]">
-                            Get started.
+                            <Link to="/service">Get Started</Link>
                         </button>
                     </div>
                 </MotionDiv>
