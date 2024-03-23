@@ -27,7 +27,7 @@ export function get_route_id(stopId) {
 // Stop time
 export function get_all_departure_by_stop_name(name) {
   return getStoptimes({
-    stop_id: get_stop_id_byarrival_time_name(name),
+    stop_id: get_stop_id_by_name(name),
   }).map((stopTime) => ({ time: stopTime.departure_time, trip_id: stopTime.trip_id }));
 }
 
