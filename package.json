@@ -4,22 +4,25 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node server",
+    "dev": "node server/server",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --ssrManifest --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
     "preview": "cross-env NODE_ENV=production node server"
   },
   "dependencies": {
+    "better-sqlite3": "^9.4.3",
     "compression": "^1.7.4",
     "express": "^4.18.2",
     "framer-motion": "^11.0.20",
+    "gtfs": "^4.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.3",
     "sirv": "^2.0.4",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "xml2json": "^0.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.45",

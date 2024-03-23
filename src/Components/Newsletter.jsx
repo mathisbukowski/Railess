@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Newsletter = () => {
     return (
         <div className="w-full py-16 text-white px-4">
@@ -21,7 +23,7 @@ const Newsletter = () => {
                     </div>
                     <p>
                         We care bout the protection of your data. Read our{" "}
-                        <span className="text-lineColor">Privacy Policy.</span>
+                        <span className="text-lineColor"><Link to="/policies">Privacy Policy.</Link></span>
                     </p>
                 </div>
             </div>
