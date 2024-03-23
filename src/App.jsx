@@ -1,21 +1,22 @@
-import Navbar from "./Components/Navbar.jsx";
-import Hero from "./Components/Hero.jsx"
-import Cards from "./Components/Cards.jsx"
-import Newsletter from "./Components/Newsletter.jsx";
-import Footer from "./Components/Footer.jsx";
+import React from "react";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from "./Pages/Home.jsx";
 
 function App() {
 
   return (
       <>
-          <Navbar />
-          <Hero />
-          <Cards />
-          <Newsletter />
-          <Footer />
+          <Home />
       </>
 
   )
 }
 
+/*<!-- <React.StrictMode>
+    <BrowserRouter>
+        <Routes>
+            <Route key={"Home"} element={<Home />} path={"/"} name={"Home"} middleware={[]}/>
+        </Routes>
+    </BrowserRouter>
+</React.StrictMode> */
 export default App
