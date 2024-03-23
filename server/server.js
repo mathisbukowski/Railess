@@ -3,6 +3,7 @@ import express from 'express'
 import { get_stations_from_file } from './sncf-utils/loader.js'
 import { get_station_by_city } from './sncf-utils/stations.js' 
 import { get_all_departure_by_stop_name, get_train_name, load_gtfs_data, get_stop_time_by_stop_name } from './sncf-utils/gtfs_functions.js';
+import { apiRoute } from './api/api.js';
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production'
@@ -23,6 +24,9 @@ const app = express()
 // Load SNCF data
 app.set("stations", await get_stations_from_file());
 await load_gtfs_data();
+
+// Load routes
+app.use("/api", apiRoute);
 
 // Add Vite or respective production middlewares
 let vite
@@ -77,17 +81,17 @@ app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`)
 })
 
-let allDepartures = get_all_departure_by_stop_name("Libercourt");
+// let allDepartures = get_all_departure_by_stop_name("Libercourt");
 
-allDepartures.forEach((departure) => {
-  const trainName = get_train_name(departure);
-  departure.trainName = trainName;
-});
-allDepartures = allDepartures.filter((departure) => departure.trip_id.endsWith("53Z"));
+// allDepartures.forEach((departure) => {
+//   const trainName = get_train_name(departure);
+//   departure.trainName = trainName;
+// });
+// allDepartures = allDepartures.filter((departure) => departure.trip_id.endsWith("53Z"));
 
-console.log(allDepartures.sort(function (a, b) {
-  return a.time.localeCompare(b.time);
-}));
+// console.log(allDepartures.sort(function (a, b) {
+//   return a.time.localeCompare(b.time);
+// }));
 
 
 export { app };
