@@ -24,15 +24,15 @@ const Footer = () => {
                 <div className="mr-20">
                     <h6 className="font-extrabold text-textColor text-xl">Support</h6>
                     <ul>
-                        <li className="py-2 text-lg text-lineColor">Documentation</li>
+                        <li className="py-2 text-lg text-lineColor"><Link to="/Documentation">Documentation</Link></li>
                         <li className="py-2 text-lg text-lineColor">API Status</li>
                     </ul>
                 </div>
                 <div className="mr-20">
                     <h6 className="font-extrabold text-textColor text-xl">Company</h6>
                     <ul>
-                        <li className="py-2 text-lg text-lineColor">About</li>
-                        <li className="py-2 text-lg text-lineColor">Contact</li>
+                        <li className="py-2 text-lg text-lineColor"><Link to="/About">About</Link></li>
+                        <li className="py-2 text-lg text-lineColor"><Link to="/Contact">Contact</Link></li>
                     </ul>
                 </div>
                 <div>
