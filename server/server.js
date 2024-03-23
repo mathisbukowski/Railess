@@ -81,17 +81,7 @@ app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`)
 })
 
-// let allDepartures = get_all_departure_by_stop_name("Libercourt");
 
-// allDepartures.forEach((departure) => {
-//   const trainName = get_train_name(departure);
-//   departure.trainName = trainName;
-// });
-// allDepartures = allDepartures.filter((departure) => departure.trip_id.endsWith("53Z"));
-
-// console.log(allDepartures.sort(function (a, b) {
-//   return a.time.localeCompare(b.time);
-// }));
 
 
 export { app };
