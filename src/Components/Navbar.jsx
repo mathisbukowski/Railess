@@ -21,7 +21,7 @@ function Navbar() {
                         <Link to="/service">Service</Link>
                     </li>
                     <li className="p-4 text-textColor font-bold text-center text-xl">
-                        <Link to="/help">Help</Link>
+                        <Link to="/documentation">Documentation</Link>
                     </li>
                     <li className="p-4 text-textColor font-bold text-center text-xl">
                         <Link to="/contact">Contact</Link>

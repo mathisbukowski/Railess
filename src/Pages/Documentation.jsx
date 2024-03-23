@@ -3,12 +3,12 @@ import Newsletter from "../Components/Newsletter.jsx";
 import Footer from "../Components/Footer.jsx";
 import Navbar from "../Components/Navbar.jsx";
 
-const Help = () => {
+const Documentation = () => {
     return (
         <div>
             <Navbar />
             <div className="w-full py-[5rem] px-4 bg-white">
-                <h1 style={{ textAlign: 'center', fontWeight: 'bold', color: 'black', margin: 'auto' }} class = 'text-4xl'>Help Page</h1>
+                <h1 style={{ textAlign: 'center', fontWeight: 'bold', color: 'black', margin: 'auto' }} class = 'text-4xl'>Documentation Page</h1>
             </div>
             <Newsletter />
             <Footer />
@@ -16,4 +16,4 @@ const Help = () => {
     )
 };
 
-export default Help;
+export default Documentation;
