@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
+.idea
 
 # Gtfs
 data/gtfs
