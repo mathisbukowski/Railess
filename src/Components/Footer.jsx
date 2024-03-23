@@ -18,23 +18,24 @@ const Footer = () => {
             </div>
             <div className="lg:col-span-2 flex justify-center lg:justify-between mt-[16px] mx-[150px]">
                 <div className="mr-8">
-                    <h6 className="font-medium text-textColor">Support</h6>
+                    <h6 className="font-extrabold text-textColor text-xl">Support</h6>
                     <ul>
-                        <li className="py-2 text-sm text-lineColor">Documentation</li>
-                        <li className="py-2 text-sm text-lineColor">API Status</li>
+                        <li className="py-2 text-lg text-lineColor">Documentation</li>
+                        <li className="py-2 text-lg text-lineColor">API Status</li>
                     </ul>
                 </div>
                 <div className="mr-8">
-                    <h6 className="font-medium text-textColor">Company</h6>
+                    <h6 className="font-extrabold text-textColor text-xl">Company</h6>
                     <ul>
-                        <li className="py-2 text-sm text-lineColor">About</li>
+                        <li className="py-2 text-lg text-lineColor">About</li>
+                        <li className="py-2 text-lg text-lineColor">Contact</li>
                     </ul>
                 </div>
                 <div>
-                    <h6 className="font-medium text-textColor">Legal</h6>
+                    <h6 className="font-extrabold text-textColor text-xl">Legal</h6>
                     <ul>
-                        <li className="py-2 text-sm text-lineColor">Policy</li>
-                        <li className="py-2 text-sm text-lineColor">Terms</li>
+                        <li className="py-2 text-lineColor text-lg">Policy</li>
+                        <li className="py-2 text-lg text-lineColor">Terms</li>
                     </ul>
                 </div>
             </div>
