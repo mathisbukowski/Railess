@@ -19,10 +19,6 @@ const ssrManifest = isProduction
 // Create http server
 const app = express()
 
-// Load SNCF data
-app.set("stations", await get_stations_from_file());
-await load_gtfs_data();
-
 // Load routes
 app.use("/api", apiRoute);
 
