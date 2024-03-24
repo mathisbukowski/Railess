@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import fs from 'node:fs/promises'
 import express from 'express'
 import { load_gtfs_data } from './sncf-utils/gtfs_functions.js';
