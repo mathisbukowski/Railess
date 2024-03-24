@@ -27,5 +27,4 @@ dist-ssr
 packa
 # Gtfs
 data/gtfs
-package-lock.json
 .vercel
