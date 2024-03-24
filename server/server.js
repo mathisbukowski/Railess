@@ -5,7 +5,7 @@ import { apiRoute } from './api/api.js';
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production'
-const port = process.env.PORT || 5173
+const port = process.env.PORT || 3000
 const base = process.env.BASE || '/'
 
 // Cached production assets
