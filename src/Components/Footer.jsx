@@ -30,7 +30,7 @@ const Footer = () => {
                 <div className="mr-20">
                     <h6 className="font-extrabold text-textColor text-xl">Support</h6>
                     <ul>
-                        <li className="py-2 text-lg text-lineColor"><Link to="https://github.com/mathisbukowski/Epitech-Jam/blob/main/README.md" target="_blank">Documentation</Link></li>
+                        <li className="py-2 text-lg text-lineColor"><Link to="/Documentation">Documentation</Link></li>
                         <li className="py-2 text-lg text-lineColor">API Status</li>
                     </ul>
                 </div>
