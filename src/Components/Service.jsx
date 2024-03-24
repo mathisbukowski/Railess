@@ -42,7 +42,7 @@ const ServiceComponent = () => {
                 {departures && departures.map((departure, index) => (
                     <div key={index} className="bg-gray-100 rounded-lg p-4 my-2 shadow-md">
                         <h2 className="text-lg font-semibold">{departure.trainLongName}</h2>
-                        <p className="text-md text-gray-600">Departure : {departure.time}</p>
+                        <p className="text-md text-gray-600">Departure : {departure.time.split(':').slice(0,2).join(':')}</p>
                         <p className="text-md text-gray-600">Train ID : {departure.trainShortName}</p>
                     </div>
                 ))}
