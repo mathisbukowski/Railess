@@ -31,7 +31,7 @@ const Footer = () => {
                     <h6 className="font-extrabold text-textColor text-xl">Support</h6>
                     <ul>
                         <li className="py-2 text-lg text-lineColor"><Link to="/Documentation">Documentation</Link></li>
-                        <li className="py-2 text-lg text-lineColor">API Status</li>
+                        <li className="py-2 text-lg text-lineColor"><Link to="/Documentation#api-status">API Status</Link></li>
                     </ul>
                 </div>
                 <div className="mr-20">

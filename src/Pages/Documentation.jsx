@@ -2,6 +2,7 @@ import React from 'react';
 import Newsletter from "../Components/Newsletter.jsx";
 import Footer from "../Components/Footer.jsx";
 import Navbar from "../Components/Navbar.jsx";
+import ApiStatus from '../Components/ApiStatus.jsx';
 
 const Documentation = () => {
     return (
@@ -17,6 +18,7 @@ const Documentation = () => {
                 <p style={{ color: 'black'}} className=" text-1xl text-lineColor font-bold font-kode max-w-[1240px] mx-auto grid lg:grid-cols-1">    - /api/getAllDepartureFromStation/:stationName</p>
                 <p style={{ color: 'black'}} className=" text-1xl text-lineColor font-kode max-w-[1240px] mx-auto grid lg:grid-cols-1">    This API route allows you to obtain all departures from each station, returning the time with the corresponding ID.</p>
             </div>
+            <ApiStatus />
             <Newsletter />
             <Footer />
         </div>
