@@ -4,7 +4,7 @@ import { get_all_departure_by_stop_name, get_stop_id_by_name, get_all_station_na
 const apiRoute = express.Router();
 
 apiRoute.get('/getStopIdByName/:stationName', (req, res) => {
-    res.json({id: get_stop_id_by_name(req.params.name)});
+    res.json({id: get_stop_id_by_name(req.params.stationName)});
 });
 
 apiRoute.get('/getAllStations/', (req, res) => {

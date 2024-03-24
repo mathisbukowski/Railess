@@ -15,7 +15,11 @@ export async function load_gtfs_data() {
 
 // Stops
 export function get_stop_id_by_name(name) {
-  return getStops({ stop_name: name })[0].stop_id;
+    const stopId = getStops({ stop_name: name });
+
+    if (stopId.length === 0)
+        return undefined;
+    return getStops({ stop_name: name })[0].stop_id;
 }
 
 export function get_all_station_name() {
