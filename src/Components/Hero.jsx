@@ -1,12 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Typed from "typed.js"
 import { motion } from "framer-motion";
+import { Transition } from 'react-transition-group';
 import {Link} from "react-router-dom";
 
 const MotionDiv = motion.div;
+
+function Image() {
+    const images = ["/bg-home1.jpg", "/bg-home2.jpg", "/bg-home3.jpg"];
+    const [imageIndex, setImage] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
+    useEffect(() => {
+        let intervalId = setInterval(() => {
+            setIsTransitioning(true); 
+            setTimeout(() => {
+                setImage(imageIndex + 1 < images.length ? imageIndex + 1 : 0);
+                setIsTransitioning(false);
+            }, 1000);
+        }, 8000);
+        return () => clearInterval(intervalId);
+    });
+
+    return (
+        <img src={"/bg-home" + (imageIndex + 1).toString() + ".jpg"}  className={`w-full h-auto rounded-3xl transition-opacity duration-1000 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`} alt="Background"></img>
+    )
+};
+
 const Hero = () =>  {
-
-
     return (
         <div className="text-white">
             <div className="max-w-[calc(100vw - 40px)] mt-[-96px] w-full h-screen mx-auto px-6 md:flex md:flex-row items-center">
@@ -35,7 +56,7 @@ const Hero = () =>  {
                     transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
                     className="md:w-1/2"
                 >
-                    <img src="/bg-home.jpg" className="w-full h-auto rounded-3xl" alt="Background"/>
+                    <Image />
                 </MotionDiv>
             </div>
         </div>

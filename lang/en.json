@@ -40,7 +40,7 @@
         },
         "footer": {
             "Site": "Railess.",
-            "description": "A project made for treating Open Data with SCNF API.",
+            "description": "A project made for treating Open Data with SNCF API.",
             "text_support": "Support",
             "text_doc": "Documentation",
             "text_api": "API Status",

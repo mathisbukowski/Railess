@@ -40,7 +40,7 @@
         },
         "footer": {
             "Site": "Railess.",
-            "description": "Un projet réalisé pour traiter l'Open Data avec l'API SCNF.",
+            "description": "Un projet réalisé pour traiter l'Open Data avec l'API SNCF.",
             "text_support": "Support",
             "text_doc": "Documentation",
             "text_api": "Status API",

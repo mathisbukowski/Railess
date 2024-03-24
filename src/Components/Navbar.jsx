@@ -21,7 +21,7 @@ function Navbar() {
                         <Link to="/service">Service</Link>
                     </li>
                     <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
-                        <Link to="https://github.com/mathisbukowski/Epitech-Jam/blob/main/README.md" target="_blank">Documentation</Link>
+                        <Link to="/Documentation">Documentation</Link>
                     </li>
                     <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
                         <Link to="/contact">Contact</Link>
@@ -39,7 +39,7 @@ function Navbar() {
                         <Link to="/service">Service</Link>
                     </li>
                     <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl hover:text-lineColor">
-                        <Link to="https://github.com/mathisbukowski/Epitech-Jam/blob/main/README.md" target="_blank">Documentation</Link>
+                        <Link to="/Documentation">Documentation</Link>
                     </li>
                     <li className="p-4 text-textColor font-bold text-center text-xl">
                         <Link to="/contact">Contact</Link>
