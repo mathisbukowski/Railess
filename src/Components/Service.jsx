@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import  useSWR from 'swr';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
+import {FaTrain} from "react-icons/fa";
 
 const ServiceComponent = () => {
     const fetcher = (...args) => fetch(...args).then(res => res.json());
@@ -39,10 +40,16 @@ const ServiceComponent = () => {
                 />
             </div>
             <div className="w-[800px] mr-4 h-[600px] overflow-scroll overflow-x-hidden overflow-ellipsis mt-8">
+                <div
+                    className="flex items-center justify-center">
+                    <FaTrain className="mr-2" size={30}/>
+                    <h1 className="text-4xl font-extrabold mr-4">{station}</h1>
+                </div>
                 {departures && departures.map((departure, index) => (
                     <div key={index} className="bg-gray-100 rounded-lg p-4 my-2 shadow-md">
                         <h2 className="text-lg font-semibold">{departure.trainLongName}</h2>
-                        <p className="text-md text-gray-600">Departure : {departure.time.split(':').slice(0,2).join(':')}</p>
+                        <p className="text-md text-gray-600">Departure
+                            : {departure.time.split(':').slice(0, 2).join(':')}</p>
                         <p className="text-md text-gray-600">Train ID : {departure.trainShortName}</p>
                     </div>
                 ))}
