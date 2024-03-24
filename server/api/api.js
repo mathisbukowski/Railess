@@ -6,7 +6,7 @@ const apiRoute = express.Router();
 apiRoute.get('/getLatency/', (req, res) => {
     const startHrTime = process.hrtime();
 
-    fetch(`http://localhost:${process.env.PORT || 3000}/api/getAllDepartureFromStation/Libercourt`)
+    fetch(`http://localhost:${process.env.PORT}/api/getAllDepartureFromStation/Libercourt`)
         .then(() => {
             const elapsedHrTime = process.hrtime(startHrTime);
             const latency = elapsedHrTime[0] * 1000 + elapsedHrTime[1] / 1e6;
