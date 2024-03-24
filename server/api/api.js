@@ -17,7 +17,7 @@ apiRoute.get('/getLatency/', (req, res) => {
 });
 
 apiRoute.get('/getStopIdByName/:stationName', (req, res) => {
-    res.json({id: get_stop_id_by_name(req.params.name)});
+    res.json({id: get_stop_id_by_name(req.params.stationName)});
 });
 
 apiRoute.get('/getAllStations/', (req, res) => {

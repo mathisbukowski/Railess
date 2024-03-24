@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node server/server",
-    "build": "npm run build:client && npm run build:server",
+    "build": "npm run build:client && npm run build:server && node dist/server.js",
     "build:client": "vite build",
     "build:server": "babel server/ -d dist",
     "preview": "cross-env NODE_ENV=production node server"
@@ -19,13 +19,15 @@
     "framer-motion": "^11.0.20",
     "gtfs": "^4.9.0",
     "react": "^18.2.0",
+    "react-autosuggest": "^10.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.3",
+    "react-search-autocomplete": "^8.5.2",
+    "react-transition-group": "^4.4.5",
     "sirv": "^2.0.4",
     "swr": "^2.2.5",
-    "typed.js": "^2.1.0",
-    "xml2json": "^0.12.0"
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.1",
