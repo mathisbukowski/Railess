@@ -17,13 +17,14 @@
     "framer-motion": "^11.0.20",
     "gtfs": "^4.9.0",
     "react": "^18.2.0",
+    "react-autosuggest": "^10.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.3",
+    "react-search-autocomplete": "^8.5.2",
     "sirv": "^2.0.4",
     "swr": "^2.2.5",
-    "typed.js": "^2.1.0",
-    "xml2json": "^0.12.0"
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.45",
