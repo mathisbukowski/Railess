@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 .idea
-
+packa
 # Gtfs
 data/gtfs
 package-lock.json
