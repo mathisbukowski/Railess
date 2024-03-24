@@ -3,6 +3,19 @@ import { get_all_departure_by_stop_name, get_stop_id_by_name, get_all_station_na
 
 const apiRoute = express.Router();
 
+apiRoute.get('/getLatency/', (req, res) => {
+    const startHrTime = process.hrtime();
+
+    fetch(`http://localhost:${process.env.PORT || 3000}/api/getAllDepartureFromStation/Libercourt`)
+        .then(() => {
+            const elapsedHrTime = process.hrtime(startHrTime);
+            const latency = elapsedHrTime[0] * 1000 + elapsedHrTime[1] / 1e6;
+            res.json({latency: latency});
+        }).catch(() => {
+            res.send(500, { error: "Cannot fetch API to get latency." });
+        });
+});
+
 apiRoute.get('/getStopIdByName/:stationName', (req, res) => {
     res.json({id: get_stop_id_by_name(req.params.name)});
 });

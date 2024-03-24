@@ -27,3 +27,4 @@ dist-ssr
 
 # Gtfs
 data/gtfs
+package-lock.json
