@@ -85,20 +85,26 @@ export function get_long_name_by_trip_id(tripId) {
     return stopTime[0].route_long_name;
 }
 
+let cache = {};
+
 export function get_all_crossed_stations_by_trip_id(tripId) {
+  if (cache[tripId]) {
+    return cache[tripId];
+  }
+
   const trip = get_trip_by_trip_id(tripId);
+
   if (!trip) return [];
 
   const routeId = get_route_id_by_trip_id(tripId);
   const allStationNames = new Set(get_all_station_name());
-
-  // Create a map of station names to stop IDs
   const stationNameToStopId = new Map();
+
   allStationNames.forEach(stationName => {
     stationNameToStopId.set(stationName, get_stop_id_by_name(stationName));
   });
 
-  return Array.from(allStationNames).reduce((crossedStations, stationName) => {
+  const result = Array.from(allStationNames).reduce((crossedStations, stationName) => {
     const stopId = stationNameToStopId.get(stationName);
     const stationRouteId = get_route_id(stopId);
 
@@ -111,9 +117,10 @@ export function get_all_crossed_stations_by_trip_id(tripId) {
         crossedStations.push({ stationName, time: departureTime });
       }
     }
-
     return crossedStations;
   }, []);
+  cache[tripId] = result;
+  return result;
 }
 
 export function get_train_long_name(departure) {
