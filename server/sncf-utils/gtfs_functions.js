@@ -92,19 +92,24 @@ export function get_all_crossed_stations_by_trip_id(tripId) {
   if (!trip) return [];
   
   const routeId = get_route_id_by_trip_id(tripId);
-  const allStationNames = get_all_station_name();
   
-  return allStationNames
+  const stationNameToStopId = new Map();
+  getStops().forEach(stop => stationNameToStopId.set(stop.stop_name, stop.stop_id));
+  
+  const stopIdToRouteId = new Map();
+  getRoutes().forEach(route => stopIdToRouteId.set(route.stop_id, route.route_id));
+
+  const relevantStationNames = Array.from(stationNameToStopId.keys())
+    .filter(stationName => stopIdToRouteId.get(stationNameToStopId.get(stationName)) === routeId);
+  
+  return relevantStationNames
     .map(stationName => {
-      const stopId = get_stop_id_by_name(stationName);
-      const stationRouteId = get_route_id(stopId);
-      if (stationRouteId.includes(routeId)) {
-        const stopTimes = get_stop_time_by_stop_name(stationName);
-        const stopTimeForTrip = stopTimes.find(stopTime => stopTime.trip_id === tripId);
-        if (stopTimeForTrip) {
-          const departureTime = stopTimeForTrip.departure_time;
-          return { stationName, time: departureTime };
-        }
+      const stopId = stationNameToStopId.get(stationName);
+      const stopTimes = get_stop_time_by_stop_name(stationName);
+      const stopTimeForTrip = stopTimes.find(stopTime => stopTime.trip_id === tripId);
+      if (stopTimeForTrip) {
+        const departureTime = stopTimeForTrip.departure_time;
+        return { stationName, time: departureTime };
       }
     })
     .filter(station => station !== undefined);
