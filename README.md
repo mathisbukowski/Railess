@@ -9,18 +9,22 @@
 
 ### Pour le site :
 #### Prérequis :
-#### Être sûr que npm est installé
+- **Yarn**
+#### Être sûr que npm et yarn sont installé
   ```sh
         sudo apt-get install npm
+        npm install -g yarn
   ```
 #### Compilation et lancement du programme :
   ```sh
-        npm install
+        yarn install
 ```
   ```sh
-        npm run dev
+        yarn run dev
 ```
 ### Pour l'application mobile :
+### Repo :
+  - **https://github.com/raph559/railess_app**
 #### Prérequis :
 #### Veuillez installer :
 - **Android studio**
