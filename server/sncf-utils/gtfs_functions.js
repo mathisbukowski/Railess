@@ -87,6 +87,29 @@ export function get_long_name_by_trip_id(tripId) {
     return stopTime[0].route_long_name;
 }
 
+export function get_all_crossed_stations_by_trip_id(tripId) {
+  const trip = get_trip_by_trip_id(tripId);
+  if (!trip) return [];
+  
+  const routeId = get_route_id_by_trip_id(tripId);
+  const allStationNames = get_all_station_name();
+  
+  return allStationNames
+    .map(stationName => {
+      const stopId = get_stop_id_by_name(stationName);
+      const stationRouteId = get_route_id(stopId);
+      if (stationRouteId.includes(routeId)) {
+        const stopTimes = get_stop_time_by_stop_name(stationName);
+        const stopTimeForTrip = stopTimes.find(stopTime => stopTime.trip_id === tripId);
+        if (stopTimeForTrip) {
+          const departureTime = stopTimeForTrip.departure_time;
+          return { stationName, time: departureTime };
+        }
+      }
+    })
+    .filter(station => station !== undefined);
+}
+
 export function get_train_long_name(departure) {
     return get_long_name_by_trip_id(get_route_id_by_trip_id(departure.trip_id));
 }

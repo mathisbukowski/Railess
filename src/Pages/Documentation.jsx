@@ -17,6 +17,8 @@ const Documentation = () => {
                 <p style={{ color: 'black'}} className=" text-1xl text-lineColor font-kode max-w-[1240px] mx-auto grid lg:grid-cols-1">      This API route returns an array of all station names.</p>
                 <p style={{ color: 'black'}} className=" text-1xl text-lineColor font-bold font-kode max-w-[1240px] mx-auto grid lg:grid-cols-1">    - /api/getAllDepartureFromStation/:stationName</p>
                 <p style={{ color: 'black'}} className=" text-1xl text-lineColor font-kode max-w-[1240px] mx-auto grid lg:grid-cols-1">    This API route allows you to obtain all departures from each station, returning the time with the corresponding ID.</p>
+                <p style={{ color: 'black'}} className=" text-1xl text-lineColor font-bold font-kode max-w-[1240px] mx-auto grid lg:grid-cols-1">    - /api/getAllCrossedStationsByTripId/:tripId</p>
+                <p style={{ color: 'black'}} className=" text-1xl text-lineColor font-kode max-w-[1240px] mx-auto grid lg:grid-cols-1">    This API route returns an array of objects, where each object contains the station name and the departure time when the train crosses that station for the given trip ID.</p>
             </div>
             <ApiStatus />
             <Newsletter />

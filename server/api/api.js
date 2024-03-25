@@ -1,5 +1,5 @@
 import express from 'express'
-import { get_all_departure_by_stop_name, get_stop_id_by_name, get_all_station_name, get_train_long_name, get_train_short_name } from "../sncf-utils/gtfs_functions.js";
+import { get_all_departure_by_stop_name, get_stop_id_by_name, get_all_station_name, get_train_long_name, get_train_short_name, get_all_crossed_stations_by_trip_id} from "../sncf-utils/gtfs_functions.js";
 
 const apiRoute = express.Router();
 
@@ -36,6 +36,15 @@ apiRoute.get('/getAllDepartureFromStation/:stationName', (req, res) => {
     res.json(allDepartures.sort(function (a, b) {
         return a.time.localeCompare(b.time);
     }));
+});
+
+apiRoute.get('/getAllCrossedStationsByTrip/:tripId', (req, res) => {
+    const crossedStations = get_all_crossed_stations_by_trip_id(req.params.tripId);
+    if (crossedStations) {
+        res.json(crossedStations);
+    } else {
+        res.status(404).send({ error: "No stations found for this trip ID." });
+    }
 });
 
 export { apiRoute };
