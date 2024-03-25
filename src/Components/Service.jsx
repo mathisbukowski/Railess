@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import  useSWR from 'swr';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import {FaTrain} from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 const ServiceComponent = () => {
     const fetcher = (...args) => fetch(...args).then(res => res.json());
@@ -48,9 +49,13 @@ const ServiceComponent = () => {
                 {departures && departures.map((departure, index) => (
                     <div key={index} className="bg-gray-100 rounded-lg p-4 my-2 shadow-md">
                         <h2 className="text-lg font-semibold">{departure.trainLongName}</h2>
-                        <p className="text-md text-gray-600">Departure
-                            : {departure.time.split(':').slice(0, 2).join(':')}</p>
+                        <p className="text-md text-gray-600">Departure : {departure.time.split(':').slice(0, 2).join(':')}</p>
                         <p className="text-md text-gray-600">Train ID : {departure.trainShortName}</p>
+                       <button className="bg-lineColor text-textColor rounded-md font-medium w-48 ml-4 my-6 px-6 py-3 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+                           <Link to={`/trainroute/${departure.trip_id}`}>
+                               See the train route.
+                           </Link>
+                       </button>
                     </div>
                 ))}
             </div>

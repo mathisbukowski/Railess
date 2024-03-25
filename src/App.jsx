@@ -11,6 +11,7 @@ import Service from "./Pages/Service.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Documentation from "./Pages/Documentation.jsx";
 import Policies from "./Pages/Policies.jsx";
+import Train from "./Pages/Train.jsx";
 
 function App() {
     let router;
@@ -26,6 +27,7 @@ function App() {
                     <Route key={"Documentation"} element={<Documentation />} path={"/Documentation"} name={"Documentation"} middleware={[]}/>
                     <Route key={"Contact"} element={<Contact />} path={"/contact"} name={"Contact"} middleware={[]}/>
                     <Route key={"Policies"} element={<Policies />} path={"/policies"} name={"Policies"} middleware={[]}/>
+                    <Route key={"Train"} element={<Train />} path={"/trainroute/:trip_id"} name={"Train"} middleware={[]} />
                 </Routes>
             </BrowserRouter>
          </>
