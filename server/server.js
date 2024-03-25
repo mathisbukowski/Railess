@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import fs from 'node:fs/promises'
 import express from 'express'
+import compression from 'compression';
 import { load_gtfs_data } from './sncf-utils/gtfs_functions.js';
 import { apiRoute } from './api/api.js';
 
@@ -20,9 +21,11 @@ const ssrManifest = isProduction
 // Create http server
 const app = express()
 
+
 // Load SNCF data
 await load_gtfs_data();
 
+app.use(compression());
 // Load routes
 app.use("/api", apiRoute);
 
