@@ -5,7 +5,6 @@ export async function load_gtfs_data() {
   const config = JSON.parse(
     await fs.readFile(new URL("../../config.json", import.meta.url))
   );
-
   try {
     await importGtfs(config);
   } catch (error) {
@@ -16,7 +15,6 @@ export async function load_gtfs_data() {
 // Stops
 export function get_stop_id_by_name(name) {
     const stopId = getStops({ stop_name: name });
-
     if (stopId.length === 0)
         return undefined;
     return getStops({ stop_name: name })[0].stop_id;
@@ -90,29 +88,32 @@ export function get_long_name_by_trip_id(tripId) {
 export function get_all_crossed_stations_by_trip_id(tripId) {
   const trip = get_trip_by_trip_id(tripId);
   if (!trip) return [];
-  
-  const routeId = get_route_id_by_trip_id(tripId);
-  
-  const stationNameToStopId = new Map();
-  getStops().forEach(stop => stationNameToStopId.set(stop.stop_name, stop.stop_id));
-  
-  const stopIdToRouteId = new Map();
-  getRoutes().forEach(route => stopIdToRouteId.set(route.stop_id, route.route_id));
 
-  const relevantStationNames = Array.from(stationNameToStopId.keys())
-    .filter(stationName => stopIdToRouteId.get(stationNameToStopId.get(stationName)) === routeId);
-  
-  return relevantStationNames
-    .map(stationName => {
-      const stopId = stationNameToStopId.get(stationName);
+  const routeId = get_route_id_by_trip_id(tripId);
+  const allStationNames = new Set(get_all_station_name());
+
+  // Create a map of station names to stop IDs
+  const stationNameToStopId = new Map();
+  allStationNames.forEach(stationName => {
+    stationNameToStopId.set(stationName, get_stop_id_by_name(stationName));
+  });
+
+  return Array.from(allStationNames).reduce((crossedStations, stationName) => {
+    const stopId = stationNameToStopId.get(stationName);
+    const stationRouteId = get_route_id(stopId);
+
+    if (stationRouteId.includes(routeId)) {
       const stopTimes = get_stop_time_by_stop_name(stationName);
       const stopTimeForTrip = stopTimes.find(stopTime => stopTime.trip_id === tripId);
+
       if (stopTimeForTrip) {
         const departureTime = stopTimeForTrip.departure_time;
-        return { stationName, time: departureTime };
+        crossedStations.push({ stationName, time: departureTime });
       }
-    })
-    .filter(station => station !== undefined);
+    }
+
+    return crossedStations;
+  }, []);
 }
 
 export function get_train_long_name(departure) {
