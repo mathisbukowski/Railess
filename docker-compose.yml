@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  railess:
+    build: ./railess
+    ports:
+      - "8080"
+    restart: unless-stopped
