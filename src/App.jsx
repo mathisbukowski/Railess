@@ -12,6 +12,7 @@ import Contact from "./Pages/Contact.jsx";
 import Documentation from "./Pages/Documentation.jsx";
 import Policies from "./Pages/Policies.jsx";
 import Train from "./Pages/Train.jsx";
+import Loading from "./Components/Loading.jsx";
 
 function App() {
     let router;
@@ -33,7 +34,7 @@ function App() {
          </>
         )
     } else {
-        router = <div>Loading...</div>
+        router = <Loading />
     }
     return router;
 }
