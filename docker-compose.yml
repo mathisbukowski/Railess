@@ -1,8 +1,8 @@
-version: '3'
+version: '3.8'
 
 services:
   railess:
     image: railess-image
     ports:
-      - "8080:80"
+      - "8000:80"
     restart: unless-stopped
