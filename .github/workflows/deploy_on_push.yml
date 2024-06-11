@@ -20,6 +20,10 @@ jobs:
 
       - name: Pull & Deploy on server
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-          cd /home/public/Epitech-Jam/
-          git pull origin main
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            cd /home/public/Epitech-Jam/
+            git pull origin main
+            docker-compose down
+            docker-compose build
+            docker-compose up -d
+          EOF
