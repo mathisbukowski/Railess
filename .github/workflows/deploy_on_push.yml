@@ -10,13 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: import checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup SSH Portal
+      - name: Setup SSH Agent
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
 
       - name: Pull & Deploy on server
         run: |
