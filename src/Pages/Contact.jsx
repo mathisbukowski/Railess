@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from "../Components/Navbar.jsx";
 import Newsletter from "../Components/Newsletter.jsx";
 import Footer from "../Components/Footer.jsx";
+import NavbarComponent from "../Components/Navbar.jsx";
 
 export default function Contact() {
     return (
         <div>
-            <Navbar />
+            <NavbarComponent />
             <div className="w-full py-[5rem] px-4 bg-white">
                 <div className="container mx-auto py-10">
                     <h1 className="text-4xl font-bold text-center text-black-800 mb-8">Contact Us</h1>
