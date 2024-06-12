@@ -33,8 +33,8 @@ export default function NavbarComponent() {
                             to={item.path}
                             className={`p-4 font-bold text-center text-xl rounded-2xl ${
                                 activeLink === item.path
-                                    ? 'text-white bg-lineColor' // Styles pour le lien actif
-                                    : 'text-blue-500 bg-white border border-blue-500 hover:bg-blue-100' // Styles pour les autres liens
+                                    ? 'text-white bg-lineColor'
+                                    : 'text-blue-500 bg-white border border-blue-500 hover:bg-blue-100'
                             }`}
                             onClick={() => handleClick(item.path)}
                             style={{ transition: 'background-color 0.3s' }}
