@@ -35,4 +35,6 @@ jobs:
             docker-compose down
             docker build -t railess-image .
             docker-compose up -d
+            sudo nginx -t
+            sudo systemctl reload nginx
           EOF
