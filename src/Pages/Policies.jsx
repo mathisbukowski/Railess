@@ -3,7 +3,7 @@ import Newsletter from "../Components/Newsletter.jsx";
 import Footer from "../Components/Footer.jsx";
 import Navbar from "../Components/Navbar.jsx";
 
-const Policies = () => {
+export default function Policies() {
     return (
         <div>
             <Navbar />
@@ -29,5 +29,3 @@ const Policies = () => {
         </div>
     );
 };
-
-export default Policies;

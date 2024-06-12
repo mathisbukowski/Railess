@@ -3,7 +3,7 @@ import useSWR from "swr";
 import React, {useState} from "react";
 
 
-const TrainRoute = () => {
+export default function TrainRoute() {
     const {trip_id} = useParams();
     const fetcher = (...args) => fetch(...args).then(res => res.json());
     const {data: stations, error, isLoading} = useSWR(`/api/getAllCrossedStationsByTrip/${trip_id}`, fetcher);
@@ -24,4 +24,3 @@ const TrainRoute = () => {
     )
 }
 // <h2 className="text-lg font-semibold">{station.trainName}</h2>
-export default TrainRoute;

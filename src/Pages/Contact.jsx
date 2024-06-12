@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar.jsx";
 import Newsletter from "../Components/Newsletter.jsx";
 import Footer from "../Components/Footer.jsx";
 
-const Contact = () => {
+export default function Contact() {
     return (
         <div>
             <Navbar />
@@ -26,5 +26,3 @@ const Contact = () => {
         </div>
     );
 };
-
-export default Contact;

@@ -4,7 +4,7 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import {FaTrain} from "react-icons/fa";
 import {Link} from "react-router-dom";
 
-const ServiceComponent = () => {
+export default function ServiceComponent() {
     const fetcher = (...args) => fetch(...args).then(res => res.json());
     const { data: stations } = useSWR('/api/getAllStations', fetcher);
     const [station, setStation] = useState('Lille Flandres');
@@ -62,5 +62,3 @@ const ServiceComponent = () => {
         </div>
     );
 };
-
-export default ServiceComponent

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+export default function Navbar() {
     const [nav, setNav] = useState(false);
 
     const handleNav = () => {
@@ -49,5 +49,3 @@ function Navbar() {
         </>
     );
 }
-
-export default Navbar;

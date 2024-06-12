@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import  useSWR from 'swr';
 
-const ApiStatus = () => {
+export default function ApiStatus() {
     const fetcher = (...args) => fetch(...args).then(res => res.json());
     const {data: api_latency, error, isLoading} = useSWR('/api/getLatency', fetcher);
 
@@ -17,5 +17,3 @@ const ApiStatus = () => {
 		</div>
     );
 };
-
-export default ApiStatus;

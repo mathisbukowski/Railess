@@ -3,7 +3,6 @@ import {
     BrowserRouter,
     Routes,
     Route,
-    Link,
   } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
@@ -14,7 +13,7 @@ import Policies from "./Pages/Policies.jsx";
 import Train from "./Pages/Train.jsx";
 import Loading from "./Components/Loading.jsx";
 
-function App() {
+export default function App() {
     let router;
 
     if (typeof window !== "undefined") {
@@ -37,6 +36,4 @@ function App() {
         router = <Loading />
     }
     return router;
-}
-
-export default App
+};
