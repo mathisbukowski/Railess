@@ -9,11 +9,6 @@ export default function ApiStatus() {
     if (isLoading) return <div>Loading API status...</div>;
 
     return (
-		<div id='api-status' className="w-full py-16 px-4 bg-white font-kode">
-			<div className="max-w-[1240px] mx-auto lg:grid-cols-3">
-				<p style={{ fontWeight: 'bold', color: 'black'}} className=" text-2xl font-bold text-lineColor">API Status</p>
-				<p className='text-1xl max-w-[1240px] mx-auto grid lg:grid-cols-1'>Latency: {api_latency.latency ? api_latency.latency + " ms" : api_latency.error}</p>
-			</div>
-		</div>
+        <span>{api_latency.latency ? api_latency.latency + " ms" : api_latency.error}</span>
     );
 };
