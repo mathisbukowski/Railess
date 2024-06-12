@@ -33,6 +33,6 @@ jobs:
             cd /home/public/Epitech-Jam/
             git pull origin main
             docker-compose down
-            docker-compose build
+            docker build -t railess-image .
             docker-compose up -d
           EOF
