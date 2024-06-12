@@ -6,6 +6,7 @@ export default {
       fontFamily : {
         'contrail': ['Contrail One', 'sans-serif'],
         'kode': ['Kode Mono', 'monospace'],
+        'rubik': ['Rubik Mono One', 'sans-serif']
       },
       colors: {
         bgColor: '#808CF1',

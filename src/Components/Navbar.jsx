@@ -12,7 +12,7 @@ export default function Navbar() {
     return (
         <>
             <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
-                <h1 className="w-full text-3xl font-bold text-textColor font-kode"> <Link to="/">Railess.</Link></h1>
+                <h1 className="w-full text-3xl font-bold font-rubik text-gradient"> <Link to="/">Railess.</Link></h1>
                 <ul className="hidden md:flex">
                     <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
                         <Link to="/about">About</Link>
