@@ -4,7 +4,7 @@ import Footer from "../Components/Footer.jsx";
 import Navbar from "../Components/Navbar.jsx";
 import ApiStatus from '../Components/ApiStatus.jsx';
 
-const Documentation = () => {
+export default function Documentation() {
     return (
         <div>
             <Navbar />
@@ -26,5 +26,3 @@ const Documentation = () => {
         </div>
     )
 };
-
-export default Documentation;

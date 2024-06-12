@@ -5,7 +5,7 @@ import Newsletter from "../Components/Newsletter.jsx";
 import Footer from "../Components/Footer.jsx";
 
 
-function Home() {
+export default function Home() {
 
     return (
         <>
@@ -17,6 +17,4 @@ function Home() {
         </>
 
     )
-}
-
-export default Home;
+};

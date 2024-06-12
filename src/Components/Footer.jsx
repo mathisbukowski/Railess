@@ -6,7 +6,7 @@ import {
 import { Link } from 'react-router-dom';
 import SNCF from "/sncf.png";
 
-const Footer = () => {
+export default function Footer() {
     return (
         <div className="max-w-[1240px] mx-auto py-16 px-4 flex flex-col lg:flex-row items-center text-gray-300">
             <div className="lg:mr-8">
@@ -52,5 +52,3 @@ const Footer = () => {
     );
 
 };
-
-export default Footer;

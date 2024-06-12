@@ -15,7 +15,7 @@ function FeatureCard({ icon, title, description }) {
 }
 
 
-function Cards() {
+export default function Cards() {
     return (
         <div className="py-10 bg-gray-50">
             <div className="flex justify-center">
@@ -44,6 +44,4 @@ function Cards() {
             </div>
         </div>
     );
-}
-
-export default Cards;
+};

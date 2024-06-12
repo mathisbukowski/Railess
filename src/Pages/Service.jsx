@@ -4,7 +4,7 @@ import Footer from "../Components/Footer.jsx";
 import Navbar from "../Components/Navbar.jsx";
 import ServiceComponent from "../Components/Service.jsx";
 
-const Service = () => {
+export default function Service() {
     return (
         <div>
             <Navbar />
@@ -14,5 +14,3 @@ const Service = () => {
         </div>
     );
 };
-
-export default Service;

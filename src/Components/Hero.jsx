@@ -27,7 +27,7 @@ function Image() {
     )
 };
 
-const Hero = () =>  {
+export default function Hero() {
     return (
         <div className="text-white">
             <div className="max-w-[calc(100vw - 40px)] mt-[-96px] w-full h-screen mx-auto px-6 md:flex md:flex-row items-center">
@@ -61,6 +61,4 @@ const Hero = () =>  {
             </div>
         </div>
     );
-}
-
-export default Hero;
+};

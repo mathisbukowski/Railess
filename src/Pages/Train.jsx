@@ -4,7 +4,7 @@ import Footer from "../Components/Footer.jsx";
 import TrainRoute from "../Components/TrainRoute.jsx";
 
 
-const Train = () => {
+export default function Train() {
 
 
     return (
@@ -16,5 +16,3 @@ const Train = () => {
       </>
     )
 }
-
-export default Train;
