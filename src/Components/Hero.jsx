@@ -45,15 +45,15 @@ export default function Hero() {
                             An App to streamline your journeys.
                         </p>
                         <button
-                            className="bg-lineColor w-[200px] rounded-md font-extrabold my-6 py-3 text-textColor mx-[50px]">
-                            <Link to="/service">Get Started</Link>
+                            className="bg-white w-[200px] rounded-md font-extrabold my-6 py-3 text-lineColor     mx-[50px]">
+                            <Link to="/service">Get Started !</Link>
                         </button>
                     </div>
                 </MotionDiv>
                 <MotionDiv
                     initial={{ x: 1000 }}
                     animate={{ x: 0 }}
-                    transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
+                    transition={{ duration: 2.5, type: "spring", stiffness: 120 }}
                     className="md:w-1/2"
                 >
                     <Image />
