@@ -1,8 +1,16 @@
 import React from 'react';
+import {motion} from "framer-motion";
 
-function FeatureCard({ icon, title, description }) {
+const MotionDiv = motion.div;
+
+function FeatureCard({ icon, title, description, displayInitial }) {
     return (
-        <div className="flex flex-col items-center p-4 w-[400px] h-64 bg-white rounded-2xl border border-gray-200 shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+        <MotionDiv
+            className="flex flex-col items-center p-4 w-[400px] h-64 bg-white rounded-2xl border border-gray-200 shadow-md ease-in-out hover:scale-105 hover:shadow-lg"
+            initial={{ x: displayInitial }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
+        >
             <div className="flex-shrink-0">
                 <img className="h-12 w-12" src={icon} alt="icon" />
             </div>
@@ -10,7 +18,7 @@ function FeatureCard({ icon, title, description }) {
                 <h3 className="text-lg font-medium text-gray-900">{title}</h3>
                 <p className="mt-2 text-gray-500 text-md">{description}</p>
             </div>
-        </div>
+        </MotionDiv>
     );
 }
 
@@ -24,21 +32,25 @@ export default function Cards() {
                         icon="/service.svg"
                         title="User SaaS"
                         description="A service created by users for users."
+                        displayInitial={-1000}
                     />
                     <FeatureCard
                         icon="/time.svg"
                         title="Saving Time"
                         description="With Railess, you can earn a lot on your train searches."
+                        displayInitial={1000}
                     />
                     <FeatureCard
                         icon="/support.svg"
                         title="Reactive Support"
                         description="Our support service is very fast and efficient."
+                        displayInitial={-1000}
                     />
                     <FeatureCard
                         icon="/icon.svg"
                         title="Beta Version"
                         description="Our service is brand new, there may be some unknown bugs. Get closer to the support if necessary."
+                        displayInitial={1000}
                     />
                 </div>
             </div>

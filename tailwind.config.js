@@ -9,10 +9,12 @@ export default {
         'rubik': ['Rubik Mono One', 'sans-serif']
       },
       colors: {
-        bgColor: '#808CF1',
-        buttonColor: '#5560BF',
-        textColor: "#FFFFFF",
-        lineColor: "#1B2570"
+        bgColor: '#3F6182',
+        buttonColor: '#9EC8DB',
+        textColor: "#E9FDFC",
+        myWhite: "#FFFFFF",
+        colorSecond: "#EE7154",
+        lineColor: "#2A3542"
       }
     },
   },
