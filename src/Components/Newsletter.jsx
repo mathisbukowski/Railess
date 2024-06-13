@@ -18,13 +18,13 @@ export default function Newsletter() {
                             placeholder="Enter Email"
                         />
                         <button
-                            className="bg-lineColor text-textColor rounded-md font-medium w-48 ml-4 my-6 px-6 py-3 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+                            className="bg-colorSecond text-textColor rounded-md font-medium w-48 ml-4 my-6 px-6 py-3 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                             Notify Me
                         </button>
                     </div>
                     <p>
                         We care bout the protection of your data. Read our{" "}
-                        <span className="text-lineColor"><Link to="/policies">Privacy Policy.</Link></span>
+                        <span className="text-colorSecond"><Link to="/policies">Privacy Policy.</Link></span>
                     </p>
                 </div>
             </div>
