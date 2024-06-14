@@ -27,7 +27,7 @@ export default function Cards() {
     return (
         <div className="py-12">
             <div className="flex justify-center">
-                <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mx-6 lg:mx-12">
+                <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mx-6">
                     <FeatureCard
                         icon="/service.svg"
                         title="User SaaS"
