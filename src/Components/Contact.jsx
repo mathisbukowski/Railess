@@ -1,35 +1,52 @@
-import { useEffect } from 'react';
-
 export default function ContactComponent() {
     return (
-        <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
-                <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Contact Us</h2>
-
-
-                <div className="mt-10">
-                    <h3 className="text-2xl font-semibold mb-4 text-gray-800">Join us on Discord</h3>
-                    <div className="flex justify-center">
-                        <iframe
-                            src="https://discord.com/widget?id=1234788512792969277&theme=dark"
-                            width="350"
-                            height="500"
-                            allowTransparency="true"
-                            frameBorder="0"
-                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                            className="rounded-lg shadow-md"
-                        ></iframe>
+        <div className="min-h-screen flex items-center justify-center">
+            <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
+                <h1 className="text-2xl font-bold mb-6 text-center">Contactez-nous</h1>
+                <form className="space-y-4">
+                    <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                            Name
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            className="mt-1 p-2 border border-gray-300 rounded w-full"
+                            required
+                        />
                     </div>
-                </div>
-
-                <div className="mt-10">
-                    <h3 className="text-2xl font-semibold mb-4 text-gray-800">Contact us by mail at :</h3>
-                    <p className="text-lg text-gray-700">
-                        <a href="mailto:contact@votreprojet.com" className="text-blue-600 hover:underline ml-2">
-                            contact@railess.fr
-                        </a>
-                    </p>
-                </div>
+                    <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            className="mt-1 p-2 border border-gray-300 rounded w-full"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                            Message
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            className="mt-1 p-2 border border-gray-300 rounded w-full"
+                            required
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-700"
+                    >
+                        Envoyer
+                    </button>
+                </form>
             </div>
         </div>
     )

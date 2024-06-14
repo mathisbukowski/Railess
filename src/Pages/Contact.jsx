@@ -9,7 +9,6 @@ export default function Contact() {
         <div>
             <NavbarComponent/>
             <ContactComponent />
-            <Newsletter/>
             <Footer/>
         </div>
     );
