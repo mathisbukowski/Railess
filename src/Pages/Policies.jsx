@@ -1,12 +1,12 @@
 import React from 'react';
 import Newsletter from "../Components/Newsletter.jsx";
 import Footer from "../Components/Footer.jsx";
-import Navbar from "../Components/Navbar.jsx";
+import NavbarComponent from "../Components/Navbar.jsx";
 
 export default function Policies() {
     return (
         <div>
-            <Navbar />
+            <NavbarComponent />
             <div className="w-full py-[5rem] px-4 bg-white">
                 <h1 style={{ textAlign: 'center', fontWeight: 'bold', color: 'black', margin: 'auto' }} class = 'text-4xl'>Privacy Policy</h1>
                 <p style={{ fontWeight: 'bold', color: 'black'}} className=" text-2xl font-bold text-lineColor font-kode max-w-[1240px] mx-auto grid lg:grid-cols-2">General Policy</p>

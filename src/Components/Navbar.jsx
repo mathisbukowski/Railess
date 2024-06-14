@@ -1,51 +1,52 @@
-import { useState } from 'react';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { FcDocument, FcAbout, FcServices, FcPhone } from "react-icons/fc";
 
-export default function Navbar() {
-    const [nav, setNav] = useState(false);
 
-    const handleNav = () => {
-        setNav(!nav);
+export default function NavbarComponent() {
+    const location = useLocation();
+    const [activeLink, setActiveLink] = useState(location.pathname);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleClick = (path) => {
+        setActiveLink(path);
+        setIsOpen(false);
     };
 
+    const navItems = [
+        { path: '/about', label: 'About', icon: FcAbout },
+        { path: '/service', label: 'Service', icon: FcServices },
+        { path: '/documentation', label: 'Documentation', icon: FcDocument },
+        { path: '/contact', label: 'Contact', icon: FcPhone },
+    ];
+
     return (
-        <>
-            <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
-                <h1 className="w-full text-3xl font-bold text-textColor font-kode"> <Link to="/">Railess.</Link></h1>
-                <ul className="hidden md:flex">
-                    <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
-                        <Link to="/about">About</Link>
+        <div className="flex flex-col md:flex-row justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
+            <h1 className="w-full text-3xl font-bold font-rubik text-gradient mb-4 md:mb-0">
+                <Link to="/">Railess.</Link>
+            </h1>
+            <ul className={`-mr-12 w-full md:flex md:space-x-8 ${isOpen ? 'block' : 'hidden'}`}>
+                {navItems.map((item) => (
+                    <li key={item.path} className="flex flex-col justify-center">
+                        <Link
+                            key={item.path}
+                            to={item.path}
+                            className={`p-4 font-bold text-center text-xl rounded-2xl ${
+                                activeLink === item.path
+                                    ? 'text-blue-500 bg-white border border-blue-500 hover:bg-blue-100'
+                                    : 'text-white bg-lineColor '
+                            }`}
+                            onClick={() => handleClick(item.path)}
+                            style={{ transition: 'background-color 0.3s' }}
+                        >
+                            <span className="flex items-center">
+                                <item.icon className="inline-block mr-2 " size={20} />
+                                {item.label}
+                            </span>
+                        </Link>
                     </li>
-                    <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
-                        <Link to="/service">Service</Link>
-                    </li>
-                    <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
-                        <Link to="/Documentation">Documentation</Link>
-                    </li>
-                    <li className="p-4 text-textColor font-bold text-center text-xl hover:text-lineColor">
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-                <div onClick={handleNav} className="block md:hidden">
-                    {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
-                </div>
-                <ul className={`md:hidden ${nav ? "block" : "hidden"} fixed left-0 top-0 w-[60%] h-full border-r border-r-textColor bg-bgColor ease-in-out duration-500`}>
-                    <h1 className="w-full text-3xl font-bold m-4 text-textColor font-kode"><Link to="/">Railess.</Link></h1>
-                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl hover:text-lineColor">
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl hover:text-lineColor">
-                        <Link to="/service">Service</Link>
-                    </li>
-                    <li className="p-4 text-textColor font-bold border-b border-r-lineColor text-center text-xl hover:text-lineColor">
-                        <Link to="/Documentation">Documentation</Link>
-                    </li>
-                    <li className="p-4 text-textColor font-bold text-center text-xl">
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </div>
-        </>
+                ))}
+            </ul>
+        </div>
     );
 }

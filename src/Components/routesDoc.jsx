@@ -4,7 +4,7 @@ export default function RoutesDocComponent() {
     return (
         <>
             <div
-                className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+                className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center py-12 px-4 sm:px-6 lg:px-8">
                 <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg max-w-4xl w-full">
                     <h1 className="text-4xl font-extrabold text-center mb-8 text-gray-900">API Documentation</h1>
 
@@ -29,7 +29,7 @@ export default function RoutesDocComponent() {
                         <p><strong>Response:</strong></p>
                         <pre className="bg-gray-100 border border-gray-300 p-4 rounded shadow-inner mt-2"><code>{`{
     {
-    "id": "StopPoint:OCETrain TER-87345256"
+        "id": "StopPoint:OCETrain TER-87345256"
     }
 }`}</code></pre>
                     </section>
@@ -44,16 +44,17 @@ export default function RoutesDocComponent() {
                         <p className="text-green-600"><strong>Status:</strong> Operational.</p>
                         <p><strong>Response:</strong></p>
                         <pre className="bg-gray-100 border border-gray-300 p-4 rounded shadow-inner mt-2"><code>{`{
-    "Saint-Just-en-Chaussée",
-    "Gannes",
-    "Breteuil-Embranchement",
-    "La Faloise",
-    "Ailly-sur-Noye",
-    "Boves",
-    "Pont-Remy",
-    "Longpré-les-Corps-Saints",
-    "Again and again...!",
-  },"
+    {
+        "Saint-Just-en-Chaussée",
+        "Gannes",
+        "Breteuil-Embranchement",
+        "La Faloise",
+        "Ailly-sur-Noye",
+        "Boves",
+        "Pont-Remy",
+        "Longpré-les-Corps-Saints",
+        "Again and again...!",
+    },
 }`}</code></pre>
                     </section>
 
