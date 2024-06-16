@@ -6,7 +6,7 @@ const MotionDiv = motion.div;
 function FeatureCard({ icon, title, description, displayInitial }) {
     return (
         <MotionDiv
-            className="flex flex-col items-center p-6 w-80 h-80 bg-white rounded-2xl border border-gray-300 shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105"
+            className="flex flex-col items-center p-6 w-72 h-72 bg-white rounded-2xl border border-gray-300 shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105"
             initial={{ x: displayInitial }}
             animate={{ x: 0 }}
             transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
