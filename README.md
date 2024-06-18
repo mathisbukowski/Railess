@@ -39,8 +39,8 @@
   ```
 #### Projet réalisé par:
 - **Mathis Bukowski**
+- **Alexandre Detoeuf**
 - **Maxime Bertin**
 - **Rafael Drouart**
 - **Raphael Richaud**
-- **Alexandre Detoeuf**
 - **Alexis Salaun**
