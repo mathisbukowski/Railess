@@ -13,6 +13,15 @@ import Policies from "./Pages/Policies.jsx";
 import Train from "./Pages/Train.jsx";
 import Loading from "./Components/Loading.jsx";
 
+import './i18n.js';
+
+/*
+* TODO: language selector system
+*  with i18n
+*  make setup and component to put button for
+*  changing and make all translations
+*/
+
 export default function App() {
     let router;
 
