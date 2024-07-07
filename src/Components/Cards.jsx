@@ -1,5 +1,6 @@
 import React from 'react';
 import {motion} from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const MotionDiv = motion.div;
 
@@ -24,32 +25,33 @@ function FeatureCard({ icon, title, description, displayInitial }) {
 
 
 export default function Cards() {
+    const { t } = useTranslation();
     return (
         <div className="py-10 overflow-x-hidden">
             <div className="flex justify-center">
                 <div className="grid gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mx-4">
                     <FeatureCard
                         icon="/service.svg"
-                        title="User SaaS"
-                        description="A service created by users for users. We are constantly improving our service. Do not hesitate to give us your opinion."
+                        title={t('cards.card_user_title')}
+                        description={t('cards.card_user_description')}
                         displayInitial={-1000}
                     />
                     <FeatureCard
                         icon="/time.svg"
-                        title="Saving Time"
-                        description="With Railess, you can earn a lot on your train searches. We want to be the fastest service as possible."
+                        title={t('cards.card_save_title')}
+                        description={t('cards.card_save_description')}
                         displayInitial={1000}
                     />
                     <FeatureCard
                         icon="/support.svg"
-                        title="Reactive Support"
-                        description="Our support service is very fast and efficient. We are here to help you. Do not hesitate to contact us."
+                        title={t('cards.card_react_title')}
+                        description={t('cards.card_react_description')}
                         displayInitial={-1000}
                     />
                     <FeatureCard
                         icon="/icon.svg"
-                        title="Beta Version"
-                        description="Our service is brand new, there may be some unknown bugs. Get closer to the support if necessary. Your opinion is important to us. "
+                        title={t('cards.card_beta_title')}
+                        description={t('cards.card_beta_description')}
                         displayInitial={1000}
                     />
                 </div>

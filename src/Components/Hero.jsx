@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const MotionDiv = motion.div;
 
@@ -33,6 +34,8 @@ function Image() {
 }
 
 export default function Hero() {
+    const { t } = useTranslation();
+
     return (
         <div className="text-white">
             <div className="max-w-[calc(100vw - 40px)] mt-[-96px] w-full h-screen mx-auto px-6 md:flex md:flex-row items-center">
@@ -44,13 +47,13 @@ export default function Hero() {
                 >
                     <div className="text-left mx-[70px] mt-[150px]">
                         <h1 className="md:text-3xl sm:text-xl text-lg font-bold md:py-6">
-                            Unlock the Fast Track!
+                            {t('hero.slogan')}
                         </h1>
                         <p className="md:text-3xl sm:text-2xl text-lg mx-[25px]">
-                            An App to streamline your journeys.
+                            {t('hero.description')}
                         </p>
                         <button className="bg-colorSecond w-[200px] rounded-md font-extrabold my-6 py-3 text-myWhite mx-[50px]">
-                            <Link to="/service">Get Started !</Link>
+                            <Link to="/service">{t('hero.button')}</Link>
                         </button>
                     </div>
                 </MotionDiv>

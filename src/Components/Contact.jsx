@@ -1,12 +1,15 @@
+import { useTranslation } from "react-i18next";
+
 export default function ContactComponent() {
+    const { t } = useTranslation();
     return (
         <div className="min-h-screen flex items-center justify-center">
             <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
-                <h1 className="text-2xl font-bold mb-6 text-center">Contactez-nous</h1>
+                <h1 className="text-2xl font-bold mb-6 text-center">{t('contact.title')}</h1>
                 <form className="space-y-4">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                            Name
+                            {t('contact.label_name')}
                         </label>
                         <input
                             type="text"
@@ -18,7 +21,7 @@ export default function ContactComponent() {
                     </div>
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                            Email
+                            {t('contact.label_email')}
                         </label>
                         <input
                             type="email"
@@ -30,7 +33,7 @@ export default function ContactComponent() {
                     </div>
                     <div>
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                            Message
+                            {t('contact.label_message')}
                         </label>
                         <textarea
                             id="message"
@@ -44,7 +47,7 @@ export default function ContactComponent() {
                         type="submit"
                         className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-700"
                     >
-                        Send
+                        {t('contact.button')}
                     </button>
                 </form>
             </div>

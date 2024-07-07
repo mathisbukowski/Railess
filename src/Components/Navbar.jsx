@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FcDocument, FcAbout, FcServices, FcPhone } from "react-icons/fc";
+import { useTranslation } from "react-i18next";
 
 
 export default function NavbarComponent() {
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(location.pathname);
     const [isOpen, setIsOpen] = useState(false);
+    const { t } = useTranslation();
 
     const handleClick = (path) => {
         setActiveLink(path);
@@ -14,10 +16,10 @@ export default function NavbarComponent() {
     };
 
     const navItems = [
-        { path: '/about', label: 'About', icon: FcAbout },
-        { path: '/service', label: 'Service', icon: FcServices },
-        { path: '/documentation', label: 'Documentation', icon: FcDocument },
-        { path: '/contact', label: 'Contact', icon: FcPhone },
+        { path: '/about', label: t('navbar.about'), icon: FcAbout },
+        { path: '/service', label: t('navbar.service'), icon: FcServices },
+        { path: '/documentation', label: t('navbar.documentation'), icon: FcDocument },
+        { path: '/contact', label: t('navbar.contact'), icon: FcPhone },
     ];
 
     return (
