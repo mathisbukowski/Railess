@@ -1,0 +1,59 @@
+{
+  "navbar": {
+    "about": "Acerca de",
+    "service": "Servicio",
+    "documentation": "Documentación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "slogan": "¡Desbloquea el camino más rápido!",
+    "description": "Una aplicación para agilizar tus viajes",
+    "button": "¡Empezar!"
+  },
+  "cards": {
+    "card_user_title": "Usuario SaaS",
+    "card_user_description": "Un servicio creado por usuarios para usuarios. Estamos mejorando constantemente nuestro servicio. No dudes en darnos tu opinión.",
+    "card_save_title": "Ahorro de Tiempo",
+    "card_save_description": "Con Railess, puedes ahorrar mucho en tus búsquedas de trenes. Queremos ser el servicio más rápido posible.",
+    "card_react_title": "Soporte Reactivo",
+    "card_react_description": "Nuestro servicio de soporte es muy rápido y eficiente. Estamos aquí para ayudarte. No dudes en contactarnos.",
+    "card_beta_title": "Versión Beta",
+    "card_beta_description": "Nuestro servicio es completamente nuevo, puede haber algunos errores desconocidos. Contacta con el soporte si es necesario. Tu opinión es importante para nosotros."
+  },
+  "newsletter": {
+    "slogan": "¿No quieres perderte ninguna de nuestras nuevas actualizaciones?",
+    "descriptions": "Suscríbete a nuestro boletín y mantente informado.",
+    "input": "Introduce Email",
+    "button": "Notificarme",
+    "description": "Nos preocupamos por la protección de tus datos. Lee nuestra",
+    "span": "política de privacidad"
+  },
+  "footer": {
+    "Site": "Railess.",
+    "description": "Un proyecto creado para procesar Open Data con la API de SNCF.",
+    "text_support": "Soporte",
+    "text_doc": "Documentación",
+    "text_api": "Estado de la API",
+    "text_comp": "Compañía",
+    "text_about": "Acerca de",
+    "text_contact": "Contacto",
+    "text_leg": "Legal",
+    "text_policy": "Políticas",
+    "text_terms": "Términos"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "desc_part1": "¡Bienvenido a nuestro rincón de innovación! Somos un equipo dinámico de seis estudiantes apasionados de Epitech,\nque abarcan nuestros primeros y segundos años de estudio. Impulsados por la ética de la exploración y\n                    la creatividad, emprendimos un viaje para abordar el ámbito de los Datos Abiertos.",
+    "desc_part2": "Con entusiasmo ilimitado, nos sumergimos en el vasto panorama de posibilidades y elegimos unánimemente\n                explorar el ámbito de los Datos Abiertos. Entre la miríada de opciones, nos encontramos atraídos por el rico\n                tapiz de información proporcionada por la SNCF. Así nació nuestra misión: aprovechar el poder de\n                los Datos Abiertos para agilizar el acceso a la información ferroviaria esencial.",
+    "desc_part3": "Mediante un esfuerzo colaborativo y una dedicación incansable, elaboramos una plataforma digital potenciada por\n                la API de SNCF. ¿Nuestro objetivo? Proporcionar a los usuarios un acceso rápido y sin complicaciones a datos vitales relacionados con\n                las estaciones de tren. Ya sea información sobre horarios de salida, plataformas o actualizaciones de servicios, nuestra\n                plataforma se erige como un faro de eficiencia en el ámbito de la información sobre transporte.",
+    "desc_part4": "Más allá del mero desarrollo de un sitio web, nuestro esfuerzo simboliza una fusión de innovación y\n                utilidad. Representa nuestro compromiso colectivo de aprovechar la tecnología para el mejoramiento de\n                la sociedad, haciendo accesible la información esencial con solo un clic.",
+    "desc_part5": "Mientras continuamos navegando por el panorama en constante evolución de la tecnología y los datos, te invitamos a unirte\n                a nosotros en este emocionante viaje. Juntos, desbloqueemos el potencial de los Datos Abiertos y allanar el camino\n                hacia un futuro más brillante y conectado.",
+    "button": "¡Bienvenido a bordo!"
+  },
+  "contact": {
+    "label_name": "Nombre",
+    "label_email": "Email",
+    "label_message": "Mensaje",
+    "button": "Enviar Mensaje"
+  }
+}

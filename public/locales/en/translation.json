@@ -1,55 +1,59 @@
 {
-    "locale": "en",
-    "home": {
-        "navbar": {
-            "about": "About",
-            "service": "Service",
-            "documentation": "Documentation",
-            "contact": "Contact"
-        },
-        "hero": {
-            "slogan": "Unlock the fast Track !",
-            "description": "An app to streamline your journeys",
-            "button": "Get Started !"
-        },
-        "cards": {
-            "card_user": {
-                "title": "User SaaS",
-                "description": "A service created by users for users."
-            },
-            "card_save": {
-                "title": "Saving Time",
-                "description": "With Railess, you can earn a lot on your train searches.",
-            },
-            "card_react": {
-                "title": "Reactive Support",
-                "description": "Our support service is very fast and efficient."
-            },
-            "card_beta": {
-                "title": "Beta Version",
-                "description": "Our service is brand new, there may be some unknown bugs. Get closer to the support if necessary."
-            }
-        },
-        "newsletter": {
-            "slogan": "Don't want to forget any of our new updates ?",
-            "descriptions": "Sign up to our newsletter and stay up to date.",
-            "input": "Enter Email",
-            "button": "Notify Me",
-            "description": "We care bout the protection of your data. Read our{\" \"}",
-            "span": "Privacy Policy"
-        },
-        "footer": {
-            "Site": "Railess.",
-            "description": "A project made for treating Open Data with SNCF API.",
-            "text_support": "Support",
-            "text_doc": "Documentation",
-            "text_api": "API Status",
-            "text_comp": "Company",
-            "text_about": "About",
-            "text_contact": "Contact",
-            "text_leg": "Legal",
-            "text_policy": "Policy",
-            "text_terms": "Terms"
-        }
+    "navbar": {
+        "about": "About",
+        "service": "Service",
+        "documentation": "Documentation",
+        "contact": "Contact"
+    },
+    "hero": {
+        "slogan": "Unlock the fastest path!",
+        "description": "An app to streamline your travels",
+        "button": "Get Started!"
+    },
+    "cards": {
+        "card_user_title": "User SaaS",
+        "card_user_description": "A service created by users for users. We are constantly improving our service. Do not hesitate to give us your opinion.",
+        "card_save_title": "Saving Time",
+        "card_save_description": "With Railess, you can earn a lot on your train searches. We want to be the fastest service as possible.",
+        "card_react_title": "Reactive Support",
+        "card_react_description": "Our support service is very fast and efficient. We are here to help you. Do not hesitate to contact us.",
+        "card_beta_title": "Beta Version",
+        "card_beta_description": "Our service is brand new, there may be some unknown bugs. Get closer to the support if necessary. Your opinion is important to us."
+    },
+    "newsletter": {
+        "slogan": "Don't want to miss any of our new updates?",
+        "descriptions": "Sign up for our newsletter and stay informed.",
+        "input": "Enter Email",
+        "button": "Notify Me",
+        "description": "We care about your data protection. Read our",
+        "span": "Privacy Policy"
+    },
+    "footer": {
+        "description": "A project created to process Open Data with the SNCF API.",
+        "text_support": "Support",
+        "text_doc": "Documentation",
+        "text_api": "API Status",
+        "text_comp": "Company",
+        "text_about": "About",
+        "text_contact": "Contact",
+        "text_leg": "Legal",
+        "text_policy": "Policies",
+        "text_terms": "Terms"
+    },
+    "about": {
+        "title": "About Us !",
+        "desc_part1": "Welcome to our corner of innovation! We are a dynamic team of six passionate students from Epitech,\nspanning across our first and second years of study. Driven by the ethos of exploration and\n                    creativity, we embarked on a journey to tackle the realm of Open Data.",
+        "desc_part2": "With boundless enthusiasm, we delved into the vast landscape of possibilities and unanimously chose\nto explore the realm of Open Data. Among the myriad of options, we found ourselves drawn to the rich\n                    tapestry of information provided by the SNCF. Thus, our mission was born – to harness the power of\n                    Open Data to streamline access to essential railway information.",
+        "desc_part3": "Through collaborative effort and tireless dedication, we crafted a digital platform empowered by the\nSNCF API. Our goal? To provide users with swift and seamless access to vital data pertaining to\n                    railway stations. Whether it's departure times, platform information, or service updates, our\n                    platform stands as a beacon of efficiency in the realm of transportation information.",
+        "desc_part4": "Beyond the mere development of a website, our endeavor symbolizes a fusion of innovation and\nutility. It represents our collective commitment to leveraging technology for the betterment of\n                    society, making essential information accessible at the click of a button.",
+        "desc_part5": "As we continue to navigate the ever-evolving landscape of technology and data, we invite you to join\nus on this exhilarating journey. Together, let's unlock the potential of Open Data and pave the way\n                    for a brighter, more connected future.",
+        "button": "Welcome Aboard !"
+    },
+    "contact": {
+        "title": "Contact Us !",
+        "label_name": "Name",
+        "label_email": "Email",
+        "label_message": "Message",
+        "button": "Send Message"
     }
 }

@@ -1,55 +1,59 @@
 {
-    "locale": "fr",
-    "home": {
-        "navbar": {
-            "about": "À propos",
-            "service": "Service",
-            "documentation": "Documentation",
-            "contact": "Contact"
-        },
-        "hero": {
-            "slogan": "Débloquez le chemin le plus rapide !",
-            "description": "Une application pour rationaliser vos déplacements",
-            "button": "Commencer !"
-        },
-        "cards": {
-            "card_user": {
-                "title": "Utilisateur SaaS",
-                "description": "Un service créé par des utilisateurs pour des utilisateurs."
-            },
-            "card_save": {
-                "title": "Gagne du temps",
-                "description": "Avec Railless, vous pouvez gagner beaucoup sur vos recherches de trains."
-            },
-            "card_react": {
-                "title": "Support Réactif",
-                "description": "Notre service d'assistance est très rapide et efficace."
-            },
-            "card_beta": {
-                "title": "Version Beta",
-                "description": "Notre service est tout nouveau, il peut y avoir des bugs inconnus. Rapprochez-vous du support si besoin."
-            }
-        },
-        "newsletter": {
-            "slogan": "Vous ne voulez oublier aucune de nos nouvelles mises à jour ?",
-            "descriptions": "Inscrivez-vous à notre newsletter et restez informé.",
-            "input": "Entrez Email",
-            "button": "Prévenez-moi",
-            "description": "Nous nous soucions de la protection de vos données. Lisez notre{\" \"}",
-            "span": "politique de confidentialité"
-        },
-        "footer": {
-            "Site": "Railess.",
-            "description": "Un projet réalisé pour traiter l'Open Data avec l'API SNCF.",
-            "text_support": "Support",
-            "text_doc": "Documentation",
-            "text_api": "Status API",
-            "text_comp": "Compagnie",
-            "text_about": "À propos",
-            "text_contact": "Contact",
-            "text_leg": "Legal",
-            "text_policy": "Politiques",
-            "text_terms": "Termes"
-        }
+    "navbar": {
+        "about": "À propos",
+        "service": "Service",
+        "documentation": "Documentation",
+        "contact": "Contact"
+    },
+    "hero": {
+        "slogan": "Débloquez le chemin le plus rapide !",
+        "description": "Une application pour rationaliser vos déplacements",
+        "button": "Commencer !"
+    },
+    "cards": {
+        "card_user_title": "Utilisateur SaaS",
+        "card_user_description": "Un service créé par des utilisateurs pour des utilisateurs. Nous améliorons constamment notre service. N'hésitez pas à nous donner votre avis.",
+        "card_save_title": "Gain de Temps",
+        "card_save_description": "Avec Railess, vous pouvez gagner beaucoup de temps sur vos recherches de trains. Nous voulons être le service le plus rapide possible.",
+        "card_react_title": "Support Réactif",
+        "card_react_description": "Notre service d'assistance est très rapide et efficace. Nous sommes là pour vous aider. N'hésitez pas à nous contacter.",
+        "card_beta_title": "Version Beta",
+        "card_beta_description": "Notre service est tout nouveau, il peut y avoir quelques bugs inconnus. Contactez le support si nécessaire. Votre avis est important pour nous."
+    },
+    "newsletter": {
+        "slogan": "Vous ne voulez manquer aucune de nos nouvelles mises à jour ?",
+        "descriptions": "Inscrivez-vous à notre newsletter et restez informé.",
+        "input": "Entrez Email",
+        "button": "Prévenez-moi",
+        "description": "Nous nous soucions de la protection de vos données. Lisez notre",
+        "span": "politique de confidentialité"
+    },
+    "footer": {
+        "Site": "Railess.",
+        "description": "Un projet réalisé pour traiter l'Open Data avec l'API SNCF.",
+        "text_support": "Support",
+        "text_doc": "Documentation",
+        "text_api": "Status API",
+        "text_comp": "Compagnie",
+        "text_about": "À propos",
+        "text_contact": "Contact",
+        "text_leg": "Légal",
+        "text_policy": "Politiques",
+        "text_terms": "Termes"
+    },
+    "about": {
+        "title": "À propos de nous",
+        "desc_part1": "Bienvenue dans notre coin d'innovation ! Nous sommes une équipe dynamique de six étudiants passionnés d'Epitech,\nrépartis entre notre première et deuxième année d'études. Animés par l'esprit d'exploration et\n                    de créativité, nous nous sommes lancés dans une aventure pour aborder le domaine des données ouvertes.",
+        "desc_part2": "Avec un enthousiasme sans borne, nous avons plongé dans le vaste paysage des possibilités et avons unanimement choisi\n                d'explorer le domaine des données ouvertes. Parmi les innombrables options, nous nous sommes trouvés attirés par la riche\n                tapisserie d'informations fournies par la SNCF. Ainsi, notre mission est née : exploiter la puissance des\n                données ouvertes pour simplifier l'accès aux informations ferroviaires essentielles.",
+        "desc_part3": "Grâce à un effort collaboratif et à une dévotion sans relâche, nous avons conçu une plateforme numérique propulsée par l'API\n                de la SNCF. Notre objectif ? Fournir aux utilisateurs un accès rapide et sans accroc aux données essentielles relatives aux\n                gares ferroviaires. Qu'il s'agisse des horaires de départ, des informations sur les quais ou des mises à jour de service, notre\n                plateforme se veut un phare d'efficacité dans le domaine de l'information sur les transports.",
+        "desc_part4": "Au-delà du simple développement d'un site web, notre projet symbolise une fusion d'innovation et\n                d'utilité. Il représente notre engagement collectif à tirer parti de la technologie pour améliorer la société,\n                rendant les informations essentielles accessibles en un clic.",
+        "desc_part5": "Alors que nous continuons à naviguer dans le paysage en constante évolution de la technologie et des données, nous vous invitons à\n                nous rejoindre dans cette aventure exaltante. Ensemble, débloquons le potentiel des données ouvertes et ouvrons la voie\n                à un avenir plus lumineux et plus connecté.",
+        "button": "Bienvenue à bord !"
+    },
+    "contact": {
+        "label_name": "Nom",
+        "label_email": "Email",
+        "label_message": "Message",
+        "button": "Envoyer le message"
     }
 }
