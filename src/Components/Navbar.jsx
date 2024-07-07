@@ -4,15 +4,23 @@ import { FcDocument, FcAbout, FcServices, FcPhone } from "react-icons/fc";
 import { useTranslation } from "react-i18next";
 
 
+
 export default function NavbarComponent() {
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(location.pathname);
     const [isOpen, setIsOpen] = useState(false);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language)
+
 
     const handleClick = (path) => {
         setActiveLink(path);
         setIsOpen(false);
+    };
+
+    const handleLanguageChange = (lng) => {
+        i18n.changeLanguage(lng);
+        setSelectedLanguage(lng);
     };
 
     const navItems = [
@@ -20,6 +28,12 @@ export default function NavbarComponent() {
         { path: '/service', label: t('navbar.service'), icon: FcServices },
         { path: '/documentation', label: t('navbar.documentation'), icon: FcDocument },
         { path: '/contact', label: t('navbar.contact'), icon: FcPhone },
+    ];
+
+    const languageOptions = [
+        { code: 'en', label: 'English', emoji: '🇺🇸' },
+        { code: 'fr', label: 'Français', emoji: '🇫🇷' },
+        { code: 'es', label: 'Español', emoji: '🇪🇸' },
     ];
 
     return (
@@ -48,6 +62,30 @@ export default function NavbarComponent() {
                         </Link>
                     </li>
                 ))}
+                <li className="flex items-center">
+                    <div className="relative">
+                        <button className="p-4 font-bold text-center text-xl rounded-2xl text-white bg-lineColor flex items-center" onClick={() => setIsOpen(!isOpen)}>
+                            <span className="inline-block mr-2" role="img" aria-label={selectedLanguage}>
+                                {languageOptions.find((lang) => lang.code === selectedLanguage)?.emoji}
+                            </span>
+                            {t('Language')}
+                        </button>
+                        {isOpen && (
+                            <ul className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-20">
+                                {languageOptions.map((option) => (
+                                    <li key={option.code} className="flex items-center p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange(option.code)}>
+                                        <span className="inline-block mr-2" role="img" aria-label={option.label}>
+                                            {option.emoji}
+                                        </span>
+                                        <p className="text-bgColor">
+                                            {option.label}
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+                </li>
             </ul>
         </div>
     );
